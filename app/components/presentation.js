@@ -1,8 +1,12 @@
 'use client'
 import Button from "./button";
 import { motion } from "framer-motion"
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../data/translations";
 
-export default function Presentation () {
+export default function Presentation() {
+  const { language } = useLanguage();
+  const { presentation } = translations;
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -13,7 +17,7 @@ export default function Presentation () {
       <h2
         className="text-orange-light-theme dark:text-orange-theme font-body text-md lg:text-lg pb-2"
       >
-        Hi, my name is
+        {presentation.greeting[language]}
       </h2>
       <h1
         initial={{ opacity: 0 }}
@@ -26,12 +30,16 @@ export default function Presentation () {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="text-black-theme dark:text-white-theme text-5xl lg:text-7xl font-bold pb-4">
-        Let´s build together!
+        {presentation.buildTogether[language]}
       </h2>
       <p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-black-theme dark:text-white-theme lg:text-xl max-w-2xl pb-4 lg:pb-12">I’m a Frontend Developer passionate about creating exceptional digital experiences. I excel in developing accessible, user-friendly products, with a focus on crafting <span className="text-orange-light-theme dark:text-orange-theme">efficient websites.</span>
+        className="text-black-theme dark:text-white-theme lg:text-xl max-w-2xl pb-4 lg:pb-12">
+        {presentation.description[language]}
+        <span className="text-orange-light-theme dark:text-orange-theme ml-1">
+          {presentation.efficientWebsites[language]}
+        </span>
       </p>
       <div
         initial={{ opacity: 0 }}
@@ -39,7 +47,7 @@ export default function Presentation () {
         className="pt-2"
       >
         <Button
-          btnText={"Let's chat!"}
+          btnText={presentation.letsChat[language]}
           link={"mailto:franjuaache@gmail.com"}
           isExternal={false}
         />

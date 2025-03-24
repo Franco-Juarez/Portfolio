@@ -20,7 +20,7 @@ export default function Button({btnText, link, isExternal = true}) {
       text-orange-light-theme
       hover:bg-orange-light-theme
       bg-transparent 
-      hover:text-btn-text
+      hover:text-white
       hover:font-normal
       dark:hover:text-white
       dark:border-orange-theme 

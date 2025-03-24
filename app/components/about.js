@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Portrait from "../img/portrait.png"
 import Button from "./button";
@@ -7,12 +8,17 @@ import CssIcon from "../icons/cssIcon";
 import JsIcon from "../icons/jsIcon";
 import GitIcon from "../icons/gitIcon";
 import WordpressIcon from "../icons/wordpressIcon";
+import { useLanguage } from "../context/LanguageContext";
+import { translations } from "../data/translations";
 
 export default function About() {
+  const { language } = useLanguage();
+  const { about } = translations;
+
   return (
     <section id="about" className="w-full lg:min-h-screen py-12 lg:py-24 space-y-4">
       <h2
-      className="before:content-['01.'] 
+        className="before:content-['01.'] 
       before:font-body 
       before:mr-2 
       after:mr-2 
@@ -25,25 +31,25 @@ export default function About() {
       text-3xl
       font-bold
       "
-      >About Me</h2>
+      >{about.title[language]}</h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-flow-col gap-y-4 lg:gap-4">
         <article className="row-span-3 font-body text-black-theme dark:text-white-theme bg-white-theme dark:bg-black-card p-8 rounded-md shadow-md flex flex-col items-center space-y-2">
           <Image
-            className="rounded-full"             
+            className="rounded-full"
             alt="Portrait of Franco Juárez on an orange background, front-end developer and creator of this website"
             width={300}
             height={300}
             priority
             title="Portrait of Franco Juárez"
             src={Portrait}
-            />
-            <h2 className="pt-2 font-display text-orange-light-theme dark:text-orange-theme text-xl font-bold">Franco Juárez</h2>
-            <a href="mailto:franjuaache@gmail.com" className="pb-4 hover:text-orange-light-theme dark:hover:text-orange-theme">franjuaache@gmail.com</a>
-            <Button 
-            btnText={"Resumee"}
+          />
+          <h2 className="pt-2 font-display text-orange-light-theme dark:text-orange-theme text-xl font-bold">Franco Juárez</h2>
+          <a href="mailto:franjuaache@gmail.com" className="pb-4 hover:text-orange-light-theme dark:hover:text-orange-theme">franjuaache@gmail.com</a>
+          <Button
+            btnText={about.resume[language]}
             link={"https://drive.google.com/file/d/1L0FWmPD6H77n6xFUnkmzazxMFmXRXm9Y/view?usp=sharing"}
             isExternal={true}
-            />
+          />
         </article>
         <article className="col-span-2 bg-white-theme dark:bg-black-card space-y-4 text-black-theme dark:text-white-theme p-4 rounded-md shadow-md">
           <h2 className="
@@ -57,25 +63,60 @@ export default function About() {
           before:text-orange-light-theme
           dark:before:text-orange-theme
           ">
-            A short introduction
+            {about.shortIntro[language]}
           </h2>
           <p
-          className="text-base"
+            className="text-base"
           >
-          My academic journey began long before I ventured into the IT world when I obtained my <span className="text-orange-light-theme dark:text-orange-theme">Linguistics Professor´s  Degree</span>. Although this may sound random, this diverse background has been instrumental in my approach to coding.
+            {about.intro1[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.linguisticsDegree[language]}
+            </span>
+            {about.intro2[language]}
           </p>
-          <p 
-          className="text-base"
+          <p
+            className="text-base"
           >
-          Understanding syntax and structure isn´t just about languages; it forms the rock of my coding philosophy. I´ve delved deep into <span className="text-orange-light-theme dark:text-orange-theme">JavaScript, HTML, CSS,</span> and <span className="text-orange-light-theme dark:text-orange-theme">React.js,</span> exploring frameworks like <span className="text-orange-light-theme dark:text-orange-theme">Next.js</span> to construct efficient, delightful-to-use websites. In my tech toolkit, platforms like <span className="text-orange-light-theme dark:text-orange-theme">Firebase</span> for backend wizardry and <span className="text-orange-light-theme dark:text-orange-theme">Vercel</span> for dynamic web development have been my go-to allies in creating scalable solutions.
+            {about.codingPhilosophy1[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.techStack[language]}
+            </span>
+            {about.and[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.reactjs[language]}
+            </span>
+            {about.frameworks[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.nextjs[language]}
+            </span>
+            {about.efficientWebsites[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.firebase[language]}
+            </span>
+            {about.backendWizardry[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              Vercel
+            </span>
+            {about.dynamicDev[language]}
           </p>
           <p className="text-base">
-          Currently, I am further enhancing my technical expertise by studying a <span className="text-orange-light-theme dark:text-orange-theme">Programming Technical Degree </span>at the National Technological University (UTN). This academic pursuit is sharpening my skills and broadening my understanding of advanced programming concepts and techniques.
+            {about.currentStudies[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.techDegree[language]}
+            </span>
+            {about.utn[language]}
           </p>
-          <p 
-          className="text-base"
+          <p
+            className="text-base"
           >
-          Learning, for me, isn´t a solitary endeavor. It´s about sharing knowledge, <span className="text-orange-light-theme dark:text-orange-theme">growing collectively,</span> and thriving in collaborative environments. I thrive on team synergy, exchanging ideas, and contributing to a culture of <span className="text-orange-light-theme dark:text-orange-theme">continuous learning.</span>
+            {about.learning[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.growingCollectively[language]}
+            </span>
+            {about.thriving[language]}
+            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
+              {about.continuousLearning[language]}
+            </span>
           </p>
         </article>
         <article className="row-span-2 col-span-2 bg-white-theme dark:bg-black-card p-4 rounded-md shadow-md text-black-theme dark:text-white-theme">
@@ -90,7 +131,7 @@ export default function About() {
             before:mr-2
             before:border-orange-theme
             ">
-              My everyday tools
+              {about.everydayTools[language]}
             </h2>
             <div className="flex space-x-2">
               <HtmlIcon />

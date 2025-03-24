@@ -18,8 +18,11 @@ import { Calendar } from "@/components/ui/calendar"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { CalendarIcon } from "lucide-react"
 import { format } from "date-fns"
-import { es } from "date-fns/locale"
+import { es, enUS } from "date-fns/locale"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "../../context/LanguageContext"
+import { translations } from "../../data/translations"
+import { Card } from "@/components/ui/card"
 
 const formSchema = z.object({
   websiteType: z.enum(["landing", "business", "ecommerce", "saas", "blog"]),
@@ -36,6 +39,68 @@ const formSchema = z.object({
 })
 
 export default function ProjectTypeForm() {
+  const { language } = useLanguage()
+  const title = (translations.projectType?.title as { en: string, es: string })[language]
+  const projectTypeWebsite = (translations.projectType?.projectTypeWebsite as { en: string, es: string })[language]
+  const projectTypeLabel = (translations.projectType?.projectTypeLabel as { en: string, es: string })[language]
+  const projectTypePlaceholder = (translations.projectType?.projectTypePlaceholder as { en: string, es: string })[language]
+  const projectTypeDescription = (translations.projectType?.projectTypeDescription as { en: string, es: string })[language]
+  const websiteTypeLabel = (translations.projectType?.websiteTypeLabel as { en: string, es: string })[language]
+  const websiteTypePlaceholder = (translations.projectType?.websiteTypePlaceholder as { en: string, es: string })[language]
+  const websiteTypeDescription = (translations.projectType?.websiteTypeDescription as { en: string, es: string })[language]
+  const landingPageDescription = (translations.projectType?.landingPageDescription as { en: string, es: string })[language]
+  const websiteDescription = (translations.projectType?.websiteDescription as { en: string, es: string })[language]
+  const componentDevelopmentLabel = (translations.projectType?.componentDevelopmentLabel as { en: string, es: string })[language]
+  const componentDevelopmentDescription = (translations.projectType?.componentDevelopmentDescription as { en: string, es: string })[language]
+  const componentDescriptionLabel = (translations.projectType?.componentDescriptionLabel as { en: string, es: string })[language]
+  const componentDescriptionPlaceholder = (translations.projectType?.componentDescriptionPlaceholder as { en: string, es: string })[language]
+  const componentDescriptionDescription = (translations.projectType?.componentDescriptionDescription as { en: string, es: string })[language]
+  const maintenanceServiceLabel = (translations.projectType?.maintenanceServiceLabel as { en: string, es: string })[language]
+  const maintenanceServiceDescription = (translations.projectType?.maintenanceServiceDescription as { en: string, es: string })[language]
+  const hoursPackageLabel = (translations.projectType?.hoursPackageLabel as { en: string, es: string })[language]
+  const hoursPackageNone = (translations.projectType?.hoursPackageNone as { en: string, es: string })[language]
+  const hoursPackage30plus = (translations.projectType?.hoursPackage30plus as { en: string, es: string })[language]
+  const hoursPackageUnit = (translations.projectType?.hoursPackageUnit as { en: string, es: string })[language]
+  const hoursPackage10 = (translations.projectType?.hoursPackage10 as { en: string, es: string })[language]
+  const hoursPackage20 = (translations.projectType?.hoursPackage20 as { en: string, es: string })[language]
+  const hoursPackageDescription = (translations.projectType?.hoursPackageDescription as { en: string, es: string })[language]
+  const startDateLabel = (translations.projectType?.startDateLabel as { en: string, es: string })[language]
+  const startDatePlaceholder = (translations.projectType?.startDatePlaceholder as { en: string, es: string })[language]
+  const startDateDescription = (translations.projectType?.startDateDescription as { en: string, es: string })[language]
+  const maintenanceDetailsLabel = (translations.projectType?.maintenanceDetailsLabel as { en: string, es: string })[language]
+  const maintenanceDetailsPlaceholder = (translations.projectType?.maintenanceDetailsPlaceholder as { en: string, es: string })[language]
+  const maintenanceDetailsDescription = (translations.projectType?.maintenanceDetailsDescription as { en: string, es: string })[language]
+  const technologyLabel = (translations.projectType?.technologyLabel as { en: string, es: string })[language]
+  const technologyPlaceholder = (translations.projectType?.technologyPlaceholder as { en: string, es: string })[language]
+  const technologyDescription = (translations.projectType?.technologyDescription as { en: string, es: string })[language]
+  const technologyOptions = (translations.projectType?.technologyOptions as { en: string, es: string })[language]
+  const otherTechnologyLabel = (translations.projectType?.otherTechnologyLabel as { en: string, es: string })[language]
+  const otherTechnologyPlaceholder = (translations.projectType?.otherTechnologyPlaceholder as { en: string, es: string })[language]
+  const otherTechnologyDescription = (translations.projectType?.otherTechnologyDescription as { en: string, es: string })[language]
+  const hasHostingLabel = (translations.projectType?.hasHostingLabel as { en: string, es: string })[language]
+  const hasHostingDescription = (translations.projectType?.hasHostingDescription as { en: string, es: string })[language]
+  const hasDesignLabel = (translations.projectType?.hasDesignLabel as { en: string, es: string })[language]
+  const hasDesignDescription = (translations.projectType?.hasDesignDescription as { en: string, es: string })[language]
+  const designComplexityLabel = (translations.projectType?.designComplexityLabel as { en: string, es: string })[language]
+  const designComplexityBasic = (translations.projectType?.designComplexityBasic as { en: string, es: string })[language]
+  const designComplexityCustom = (translations.projectType?.designComplexityCustom as { en: string, es: string })[language]
+  const designComplexityPremium = (translations.projectType?.designComplexityPremium as { en: string, es: string })[language]
+  const timelineLabel = (translations.projectType?.timelineLabel as { en: string, es: string })[language]
+  const timelineDescription = (translations.projectType?.timelineDescription as { en: string, es: string })[language]
+  const timelineStandard = (translations.projectType?.timelineStandard as { en: string, es: string })[language]
+  const timelineRush = (translations.projectType?.timelineRush as { en: string, es: string })[language]
+  const timelineUrgent = (translations.projectType?.timelineUrgent as { en: string, es: string })[language]
+  const backButton = (translations.projectType?.backButton as { en: string, es: string })[language]
+  const nextButton = (translations.projectType?.nextButton as { en: string, es: string })[language]
+  const projectTypeComponent = (translations.projectType?.projectTypeComponent as { en: string, es: string })[language]
+  const projectTypeMaintenance = (translations.projectType?.projectTypeMaintenance as { en: string, es: string })[language]
+  const designComplexityBasicDescription = (translations.projectType?.designComplexityBasicDescription as { en: string, es: string })[language]
+  const designComplexityCustomDescription = (translations.projectType?.designComplexityCustomDescription as { en: string, es: string })[language]
+  const designComplexityPremiumDescription = (translations.projectType?.designComplexityPremiumDescription as { en: string, es: string })[language]
+  const timelineStandardDescription = (translations.projectType?.timelineStandardDescription as { en: string, es: string })[language]
+  const timelineRushDescription = (translations.projectType?.timelineRushDescription as { en: string, es: string })[language]
+  const timelineUrgentDescription = (translations.projectType?.timelineUrgentDescription as { en: string, es: string })[language]
+
   const {
     projectRequirements,
     setWebsiteType,
@@ -123,57 +188,108 @@ export default function ProjectTypeForm() {
   }
 
   return (
-    <div>
-      <h2 className="mb-6 text-2xl font-bold">Requisitos del Proyecto</h2>
+    <div className="space-y-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold">{title}</h2>
+        <p className="text-muted-foreground mt-2">{projectTypeDescription}</p>
+      </div>
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="projectType"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Tipo de Proyecto</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Seleccioná el tipo de proyecto" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="website">Página Web</SelectItem>
-                    <SelectItem value="component">Componente o Plugin</SelectItem>
-                    <SelectItem value="maintenance">Mantenimiento</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormDescription>Seleccioná el tipo de proyecto que necesitás.</FormDescription>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {/* Project Type Selection - Featured Card */}
+          <Card className="p-6 border-2 border-primary/20 hover:border-primary/40 transition-all shadow-sm hover:shadow-md">
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">{projectTypeLabel}</h3>
 
+              <FormField
+                control={form.control}
+                name="projectType"
+                render={({ field }) => (
+                  <FormItem>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+                      <div
+                        className={`cursor-pointer rounded-lg p-4 border-2 ${field.value === "website" ? "border-primary bg-primary/5" : "border-border hover:border-primary/30"} transition-all flex flex-col items-center text-center`}
+                        onClick={() => field.onChange("website")}
+                      >
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
+                          </svg>
+                        </div>
+                        <div className="font-medium">{projectTypeWebsite}</div>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {language === "en" ? "Complete site with multiple pages" : "Sitio completo con varias páginas"}
+                        </p>
+                      </div>
+                      <div
+                        className={`cursor-pointer rounded-lg p-4 border-2 ${field.value === "component" ? "border-primary bg-primary/5" : "border-border hover:border-primary/30"} transition-all flex flex-col items-center text-center`}
+                        onClick={() => field.onChange("component")}
+                      >
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                          </svg>
+                        </div>
+                        <div className="font-medium">{projectTypeComponent}</div>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {language === "en" ? "Individual component or plugin" : "Componente individual o plugin"}
+                        </p>
+                      </div>
+                      <div
+                        className={`cursor-pointer rounded-lg p-4 border-2 ${field.value === "maintenance" ? "border-primary bg-primary/5" : "border-border hover:border-primary/30"} transition-all flex flex-col items-center text-center`}
+                        onClick={() => field.onChange("maintenance")}
+                      >
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                          </svg>
+                        </div>
+                        <div className="font-medium">{projectTypeMaintenance}</div>
+                        <p className="text-sm text-muted-foreground mt-1">
+                          {language === "en" ? "Maintenance of existing site" : "Mantenimiento de sitio existente"}
+                        </p>
+                      </div>
+                    </div>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+          </Card>
+
+          {/* Website Specific Options */}
           {projectType === "website" && (
-            <>
+            <Card className="p-6 border border-muted shadow-sm space-y-6 animate-fade-in">
+              <div className="space-y-1">
+                <h3 className="text-xl font-semibold">
+                  {language === "en" ? "Website Details" : "Detalles del Sitio Web"}
+                </h3>
+                <p className="text-sm text-muted-foreground">
+                  {language === "en" ? "Configure your website options" : "Configurá las opciones de tu sitio web"}
+                </p>
+              </div>
+
               <FormField
                 control={form.control}
                 name="websiteType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Tipo de Sitio Web</FormLabel>
+                    <FormLabel>{websiteTypeLabel}</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Seleccioná el tipo de sitio web" />
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder={websiteTypePlaceholder} />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
                         <SelectItem value="landing">Landing Page</SelectItem>
-                        <SelectItem value="business">Sitio Web Empresarial</SelectItem>
+                        <SelectItem value="business">Website</SelectItem>
                         <SelectItem value="ecommerce">E-Commerce</SelectItem>
-                        <SelectItem value="saas">Aplicación SaaS</SelectItem>
+                        <SelectItem value="saas">SaaS</SelectItem>
                         <SelectItem value="blog">Blog</SelectItem>
                       </SelectContent>
                     </Select>
-                    <FormDescription>Seleccioná el tipo de sitio web que necesitás.</FormDescription>
+                    <FormDescription>{websiteTypeDescription}</FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -184,7 +300,7 @@ export default function ProjectTypeForm() {
                 name="pages"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Número de Páginas: {field.value}</FormLabel>
+                    <FormLabel>{language === "en" ? "Pages: " : "Páginas: "}{field.value}</FormLabel>
                     <FormControl>
                       <Slider
                         min={1}
@@ -193,217 +309,33 @@ export default function ProjectTypeForm() {
                         defaultValue={[field.value]}
                         onValueChange={(value) => field.onChange(value[0])}
                         disabled={websiteType === "landing"}
+                        className="py-4"
                       />
                     </FormControl>
+                    <div className="flex justify-between text-xs text-muted-foreground">
+                      <span>1</span>
+                      <span>25</span>
+                      <span>50</span>
+                    </div>
                     <FormDescription>
                       {websiteType === "landing"
-                        ? "Las landing pages solo tienen una página."
-                        : "Estimá cuántas páginas únicas tendrá tu sitio web."}
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </>
-          )}
-
-          {projectType === "component" && (
-            <div className="rounded-lg border p-4 bg-muted/20">
-              <h3 className="font-medium mb-2">Desarrollo de Plugin/Componente</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                Para el desarrollo de un plugin o componente, necesitamos información específica sobre la funcionalidad
-                requerida. El costo se determinará después de una consulta detallada.
-              </p>
-
-              <FormField
-                control={form.control}
-                name="otherTechnology"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Descripción del Plugin/Componente</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Describí la funcionalidad que necesitás para tu plugin o componente..."
-                        className="min-h-[100px]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormDescription>
-                      Proporcioná detalles sobre qué debe hacer el plugin, con qué sistemas debe integrarse, etc.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-          )}
-
-          {projectType === "maintenance" && (
-            <div className="rounded-lg border p-4 bg-muted/20">
-              <h3 className="font-medium mb-2">Servicio de Mantenimiento</h3>
-              <p className="text-sm text-muted-foreground mb-4">
-                El servicio de mantenimiento incluye actualizaciones de seguridad, corrección de errores y pequeñas
-                mejoras.
-              </p>
-
-              <FormField
-                control={form.control}
-                name="hoursPackage"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>
-                      Paquete de Horas:{" "}
-                      {field.value === "none" ? "Sin paquete" : field.value === "30plus" ? "30+" : field.value}{" "}
-                      {field.value !== "none" ? "horas" : ""}
-                    </FormLabel>
-                    <FormControl>
-                      <Slider
-                        min={0}
-                        max={3}
-                        step={1}
-                        defaultValue={[
-                          field.value === "10" ? 0 : field.value === "20" ? 1 : field.value === "30plus" ? 2 : 3,
-                        ]}
-                        onValueChange={(value) => {
-                          const packageValue =
-                            value[0] === 0 ? "10" : value[0] === 1 ? "20" : value[0] === 2 ? "30plus" : "none"
-                          field.onChange(packageValue)
-                        }}
-                      />
-                    </FormControl>
-                    <div className="flex justify-between text-xs text-muted-foreground mt-1">
-                      <span>10 horas</span>
-                      <span>20 horas</span>
-                      <span>30+ horas</span>
-                      <span>Sin paquete</span>
-                    </div>
-                    <FormDescription className="mt-2">
-                      Seleccioná el paquete de horas que necesitás o elegí "Sin paquete" para discutir los detalles
-                      después.
+                        ? landingPageDescription
+                        : websiteDescription}
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
               />
 
-              <FormField
-                control={form.control}
-                name="startDate"
-                render={({ field }) => (
-                  <FormItem className="flex flex-col mt-4">
-                    <FormLabel>Fecha de Inicio</FormLabel>
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-                            variant={"outline"}
-                            className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
-                          >
-                            {field.value ? (
-                              format(new Date(field.value), "PPP", { locale: es })
-                            ) : (
-                              <span>Seleccioná una fecha</span>
-                            )}
-                            <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
-                          </Button>
-                        </FormControl>
-                      </PopoverTrigger>
-                      <PopoverContent className="w-auto p-0" align="start">
-                        <Calendar
-                          mode="single"
-                          selected={field.value ? new Date(field.value) : undefined}
-                          onSelect={(date) => field.onChange(date ? date.toISOString() : "")}
-                          disabled={(date) => date < new Date()}
-                          initialFocus
-                        />
-                      </PopoverContent>
-                    </Popover>
-                    <FormDescription>
-                      Seleccioná la fecha en la que te gustaría comenzar el mantenimiento.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="otherTechnology"
-                render={({ field }) => (
-                  <FormItem className="mt-4">
-                    <FormLabel>Detalles del Sitio a Mantener</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        placeholder="Describí tu sitio web actual, tecnología utilizada y qué tipo de mantenimiento necesitás..."
-                        className="min-h-[100px]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormDescription>
-                      Proporcioná la URL de tu sitio y explicá qué tipo de mantenimiento necesitás.
-                    </FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </div>
-          )}
-
-          {(projectType === "website" || projectType === "component") && (
-            <FormField
-              control={form.control}
-              name="technology"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Tecnología</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
-                    <FormControl>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Seleccioná la tecnología" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value="nextjs">Next.js</SelectItem>
-                      <SelectItem value="wordpress">WordPress + Elementor</SelectItem>
-                      <SelectItem value="html">HTML + CSS</SelectItem>
-                      <SelectItem value="undefined">No lo sé / No definido</SelectItem>
-                      <SelectItem value="other">Otro</SelectItem>
-                    </SelectContent>
-                  </Select>
-                  <FormDescription>Seleccioná la tecnología que preferís para tu proyecto.</FormDescription>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          )}
-
-          {technology === "other" && (projectType === "website" || projectType === "component") && (
-            <FormField
-              control={form.control}
-              name="otherTechnology"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Especificar otra tecnología</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Ej: React, Angular, Vue, etc." {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          )}
-
-          {projectType === "website" && (
-            <>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 md:grid-cols-2 pt-4">
                 <FormField
                   control={form.control}
                   name="hasHosting"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                    <FormItem className="flex flex-row items-start justify-between rounded-lg border p-4 h-full">
                       <div className="space-y-0.5">
-                        <FormLabel className="text-base">¿Tenés hosting y dominio?</FormLabel>
-                        <FormDescription>Si no tenés, se añadirá un costo adicional.</FormDescription>
+                        <FormLabel className="text-base">{hasHostingLabel}</FormLabel>
+                        <FormDescription>{hasHostingDescription}</FormDescription>
                       </div>
                       <FormControl>
                         <Switch checked={field.value} onCheckedChange={field.onChange} />
@@ -416,10 +348,10 @@ export default function ProjectTypeForm() {
                   control={form.control}
                   name="hasDesign"
                   render={({ field }) => (
-                    <FormItem className="flex flex-row items-center justify-between rounded-lg border p-4">
+                    <FormItem className="flex flex-row items-start justify-between rounded-lg border p-4 h-full">
                       <div className="space-y-0.5">
-                        <FormLabel className="text-base">¿Tenés diseño propio?</FormLabel>
-                        <FormDescription>Si no tenés, se añadirá un costo adicional.</FormDescription>
+                        <FormLabel className="text-base">{hasDesignLabel}</FormLabel>
+                        <FormDescription>{hasDesignDescription}</FormDescription>
                       </div>
                       <FormControl>
                         <Switch checked={field.value} onCheckedChange={field.onChange} />
@@ -428,81 +360,338 @@ export default function ProjectTypeForm() {
                   )}
                 />
               </div>
-
-              <FormField
-                control={form.control}
-                name="designComplexity"
-                render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel>Complejidad del Diseño</FormLabel>
-                    <FormControl>
-                      <RadioGroup
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                        className="flex flex-col space-y-1"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="basic" id="basic" />
-                          <Label htmlFor="basic">Básico - Diseño simple con mínima personalización</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="custom" id="custom" />
-                          <Label htmlFor="custom">Personalizado - Diseño a medida con elementos únicos</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="premium" id="premium" />
-                          <Label htmlFor="premium">Premium - Diseño de alta gama con animaciones avanzadas</Label>
-                        </div>
-                      </RadioGroup>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="timeline"
-                render={({ field }) => (
-                  <FormItem className="space-y-3">
-                    <FormLabel>Plazo de Entrega</FormLabel>
-                    <FormControl>
-                      <RadioGroup
-                        onValueChange={field.onChange}
-                        defaultValue={field.value}
-                        className="flex flex-col space-y-1"
-                      >
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="standard" id="standard" />
-                          <Label htmlFor="standard">Estándar (4-6 semanas)</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="rush" id="rush" />
-                          <Label htmlFor="rush">Rápido (2-3 semanas)</Label>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <RadioGroupItem value="urgent" id="urgent" />
-                          <Label htmlFor="urgent">Urgente (1-2 semanas)</Label>
-                        </div>
-                      </RadioGroup>
-                    </FormControl>
-                    <FormDescription>¿Qué tan rápido necesitás que se complete tu proyecto?</FormDescription>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-            </>
+            </Card>
           )}
 
-          <div className="flex justify-between">
-            <Button type="button" variant="outline" onClick={() => setStep(1)}>
-              Atrás
+          {/* Component Development Section */}
+          {projectType === "component" && (
+            <Card className="p-6 border border-muted shadow-sm animate-fade-in">
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold">{componentDevelopmentLabel}</h3>
+                  <p className="text-sm text-muted-foreground">{componentDevelopmentDescription}</p>
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="otherTechnology"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{componentDescriptionLabel}</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder={componentDescriptionPlaceholder}
+                          className="min-h-[150px] resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormDescription>
+                        {componentDescriptionDescription}
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </Card>
+          )}
+
+          {/* Maintenance Service Section */}
+          {projectType === "maintenance" && (
+            <Card className="p-6 border border-muted shadow-sm animate-fade-in">
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold">{maintenanceServiceLabel}</h3>
+                  <p className="text-sm text-muted-foreground">{maintenanceServiceDescription}</p>
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="hoursPackage"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4">
+                      <FormLabel>
+                        {hoursPackageLabel}:{" "}
+                        <span className="text-primary font-medium">
+                          {field.value === "none" ? hoursPackageNone : field.value === "30plus" ? hoursPackage30plus : field.value}{" "}
+                          {field.value !== "none" ? hoursPackageUnit : ""}
+                        </span>
+                      </FormLabel>
+                      <FormControl>
+                        <Slider
+                          min={0}
+                          max={3}
+                          step={1}
+                          defaultValue={[
+                            field.value === "10" ? 0 : field.value === "20" ? 1 : field.value === "30plus" ? 2 : 3,
+                          ]}
+                          onValueChange={(value) => {
+                            const packageValue =
+                              value[0] === 0 ? "10" : value[0] === 1 ? "20" : value[0] === 2 ? "30plus" : "none"
+                            field.onChange(packageValue)
+                          }}
+                          className="py-4"
+                        />
+                      </FormControl>
+                      <div className="flex justify-between text-xs text-muted-foreground">
+                        <span>{hoursPackage10}</span>
+                        <span>{hoursPackage20}</span>
+                        <span>{hoursPackage30plus}</span>
+                        <span>{hoursPackageNone}</span>
+                      </div>
+                      <FormDescription className="mt-2">
+                        {hoursPackageDescription}
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="startDate"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-col mt-4">
+                      <FormLabel>{startDateLabel}</FormLabel>
+                      <Popover>
+                        <PopoverTrigger asChild>
+                          <FormControl>
+                            <Button
+                              variant={"outline"}
+                              className={cn("w-full pl-3 text-left font-normal", !field.value && "text-muted-foreground")}
+                            >
+                              {field.value ? (
+                                format(new Date(field.value), "PPP", { locale: language === "en" ? enUS : es })
+                              ) : (
+                                <span>{startDatePlaceholder}</span>
+                              )}
+                              <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+                            </Button>
+                          </FormControl>
+                        </PopoverTrigger>
+                        <PopoverContent className="w-auto p-0" align="start">
+                          <Calendar
+                            mode="single"
+                            selected={field.value ? new Date(field.value) : undefined}
+                            onSelect={(date) => field.onChange(date ? date.toISOString() : "")}
+                            disabled={(date) => date < new Date()}
+                            initialFocus
+                          />
+                        </PopoverContent>
+                      </Popover>
+                      <FormDescription>
+                        {startDateDescription}
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="otherTechnology"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>{maintenanceDetailsLabel}</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          placeholder={maintenanceDetailsPlaceholder}
+                          className="min-h-[150px] resize-none"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormDescription>
+                        {maintenanceDetailsDescription}
+                      </FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </Card>
+          )}
+
+          {/* Technology Selection */}
+          {(projectType === "website" || projectType === "component") && (
+            <Card className="p-6 border border-muted shadow-sm animate-fade-in">
+              <div className="space-y-6">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold">{technologyLabel}</h3>
+                  <p className="text-sm text-muted-foreground">{technologyDescription}</p>
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="technology"
+                  render={({ field }) => (
+                    <FormItem>
+                      <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <FormControl>
+                          <SelectTrigger>
+                            <SelectValue placeholder={technologyPlaceholder} />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="nextjs">Next.js</SelectItem>
+                          <SelectItem value="wordpress">WordPress + Elementor</SelectItem>
+                          <SelectItem value="html">HTML + CSS</SelectItem>
+                          <SelectItem value="undefined">{language === "en" ? "I don't know / Not defined" : "No lo sé / No definido"}</SelectItem>
+                          <SelectItem value="other">{language === "en" ? "Other" : "Otro"}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                {technology === "other" && (
+                  <FormField
+                    control={form.control}
+                    name="otherTechnology"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{otherTechnologyLabel}</FormLabel>
+                        <FormControl>
+                          <Input placeholder={otherTechnologyPlaceholder} {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                )}
+              </div>
+            </Card>
+          )}
+
+          {/* Design Complexity & Timeline */}
+          {projectType === "website" && (
+            <Card className="p-6 border border-muted shadow-sm animate-fade-in">
+              <div className="space-y-8">
+                <div className="space-y-1">
+                  <h3 className="text-xl font-semibold">
+                    {language === "en" ? "Style and Timeline" : "Estilo y Plazos"}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {language === "en" ? "Define the aesthetic and temporal aspects of the project" : "Define los aspectos estéticos y temporales del proyecto"}
+                  </p>
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="designComplexity"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4">
+                      <FormLabel>{designComplexityLabel}</FormLabel>
+                      <FormControl>
+                        <RadioGroup
+                          onValueChange={field.onChange}
+                          value={field.value}
+                          className="grid grid-cols-1 gap-4 pt-2 md:grid-cols-3"
+                        >
+                          <Label
+                            htmlFor="basic"
+                            className={`flex items-start flex-col rounded-lg border-2 p-4 ${field.value === "basic" ? "border-primary bg-primary/5" : "border-border"} cursor-pointer hover:border-primary/50 transition-colors`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="basic" id="basic" />
+                              <span className="font-medium">{designComplexityBasic}</span>
+                            </div>
+                            <FormDescription className="pl-6 pt-2">{designComplexityBasicDescription}</FormDescription>
+                          </Label>
+
+                          <Label
+                            htmlFor="custom"
+                            className={`flex items-start flex-col rounded-lg border-2 p-4 ${field.value === "custom" ? "border-primary bg-primary/5" : "border-border"} cursor-pointer hover:border-primary/50 transition-colors`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="custom" id="custom" />
+                              <span className="font-medium">{designComplexityCustom}</span>
+                            </div>
+                            <FormDescription className="pl-6 pt-2">{designComplexityCustomDescription}</FormDescription>
+                          </Label>
+
+                          <Label
+                            htmlFor="premium"
+                            className={`flex items-start flex-col rounded-lg border-2 p-4 ${field.value === "premium" ? "border-primary bg-primary/5" : "border-border"} cursor-pointer hover:border-primary/50 transition-colors`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="premium" id="premium" />
+                              <span className="font-medium">{designComplexityPremium}</span>
+                            </div>
+                            <FormDescription className="pl-6 pt-2">{designComplexityPremiumDescription}</FormDescription>
+                          </Label>
+                        </RadioGroup>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="timeline"
+                  render={({ field }) => (
+                    <FormItem className="space-y-4">
+                      <FormLabel>{timelineLabel}</FormLabel>
+                      <FormControl>
+                        <RadioGroup
+                          onValueChange={field.onChange}
+                          value={field.value}
+                          className="grid grid-cols-1 gap-4 pt-2 md:grid-cols-3"
+                        >
+                          <Label
+                            htmlFor="standard"
+                            className={`flex items-start flex-col rounded-lg border-2 p-4 ${field.value === "standard" ? "border-primary bg-primary/5" : "border-border"} cursor-pointer hover:border-primary/50 transition-colors`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="standard" id="standard" />
+                              <span className="font-medium">{timelineStandard}</span>
+                            </div>
+                            <FormDescription className="pl-6 pt-2">{timelineStandardDescription}</FormDescription>
+                          </Label>
+
+                          <Label
+                            htmlFor="rush"
+                            className={`flex items-start flex-col rounded-lg border-2 p-4 ${field.value === "rush" ? "border-primary bg-primary/5" : "border-border"} cursor-pointer hover:border-primary/50 transition-colors`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="rush" id="rush" />
+                              <span className="font-medium">{timelineRush}</span>
+                            </div>
+                            <FormDescription className="pl-6 pt-2">{timelineRushDescription}</FormDescription>
+                          </Label>
+
+                          <Label
+                            htmlFor="urgent"
+                            className={`flex items-start flex-col rounded-lg border-2 p-4 ${field.value === "urgent" ? "border-primary bg-primary/5" : "border-border"} cursor-pointer hover:border-primary/50 transition-colors`}
+                          >
+                            <div className="flex items-center space-x-2">
+                              <RadioGroupItem value="urgent" id="urgent" />
+                              <span className="font-medium">{timelineUrgent}</span>
+                            </div>
+                            <FormDescription className="pl-6 pt-2">{timelineUrgentDescription}</FormDescription>
+                          </Label>
+                        </RadioGroup>
+                      </FormControl>
+                      <FormDescription>{timelineDescription}</FormDescription>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+            </Card>
+          )}
+
+          <div className="flex justify-between pt-4">
+            <Button type="button" variant="outline" onClick={() => setStep(1)} className="px-8 cursor-pointer">
+              {backButton}
             </Button>
-            <Button type="submit">Siguiente</Button>
+            <Button type="submit" className="px-8 cursor-pointer">
+              {nextButton}
+            </Button>
           </div>
         </form>
       </Form>
     </div>
   )
 }
-

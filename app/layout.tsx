@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { IBM_Plex_Mono } from 'next/font/google';
 import { IBM_Plex_Sans } from 'next/font/google';
+import { LanguageProvider } from "./context/LanguageContext";
 
 export const metadata: Metadata = {
   title: 'Franco Juarez´s portfolio',
@@ -33,14 +34,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-     <body className={`${ibmPlexMono.className} ${ibmPlexSans.className} dark:bg-black-theme bg-white-theme antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
-        <LavaLamp />
-        <Analytics />
-        <SpeedInsights />
-      </body>
+      <LanguageProvider>
+        <body className={`${ibmPlexMono.className} ${ibmPlexSans.className} dark:bg-black-theme bg-white-theme antialiased`}>
+          <Navbar />
+          {children}
+          <Footer />
+          <LavaLamp />
+          <Analytics />
+          <SpeedInsights />
+        </body>
+      </LanguageProvider>
     </html>
   );
 }

@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEstimateStore } from "@/lib/store"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Label } from "@/components/ui/label"
@@ -9,26 +8,117 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { InfoIcon } from "lucide-react"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import { useLanguage } from "../../context/LanguageContext"
+import { translations } from "../../data/translations"
+
+// Definir las traducciones para las features
+const featureTranslations = {
+  contact_form: {
+    name: {
+      en: "Contact Form",
+      es: "Formulario de contacto"
+    },
+    description: {
+      en: "Include a contact form on the website",
+      es: "Incluir un formulario de contacto en el sitio web"
+    }
+  },
+  analytics: {
+    name: {
+      en: "Analytics Integration",
+      es: "Integración de Analytics"
+    },
+    description: {
+      en: "Integrate analytics tools for visitor tracking",
+      es: "Integrar herramientas de análisis para seguimiento de visitantes"
+    }
+  },
+  multilingual: {
+    name: {
+      en: "Multilingual Page",
+      es: "Página multilingüe"
+    },
+    description: {
+      en: "Make the website available in multiple languages",
+      es: "Hacer que el sitio web esté disponible en varios idiomas"
+    }
+  },
+  newsletter: {
+    name: {
+      en: "Newsletter Subscription",
+      es: "Suscripción a newsletter"
+    },
+    description: {
+      en: "Allow visitors to subscribe to your newsletter",
+      es: "Permitir a los visitantes suscribirse a tu newsletter"
+    }
+  },
+  appointment: {
+    name: {
+      en: "Appointment System",
+      es: "Sistema de turnos"
+    },
+    description: {
+      en: "Implement a system to book appointments",
+      es: "Implementar un sistema para reservar citas o turnos"
+    }
+  },
+  user_management: {
+    name: {
+      en: "User Management",
+      es: "Gestión de usuarios"
+    },
+    description: {
+      en: "Registration and login for clients",
+      es: "Registro e inicio de sesión para clientes"
+    }
+  },
+  dark_mode: {
+    name: {
+      en: "Dark/Light Mode",
+      es: "Modo oscuro/claro"
+    },
+    description: {
+      en: "To improve user experience",
+      es: "Para mejorar la experiencia del usuario"
+    }
+  },
+};
 
 export default function FeaturesForm() {
   const { projectRequirements, toggleFeature, setStep, dollarRate } = useEstimateStore()
   const { features } = projectRequirements
+  const { language } = useLanguage()
+
+  const title = (translations.features?.title as { en: string, es: string })[language]
+  const description = (translations.features?.description as { en: string, es: string })[language]
+  const backButton = (translations.features?.backButton as { en: string, es: string })[language]
+  const nextButton = (translations.features?.nextButton as { en: string, es: string })[language]
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     setStep(4)
   }
 
-  // Función para convertir precio en USD a ARS
-  const usdToArs = (usdPrice: number) => {
-    return Math.ceil((usdPrice * dollarRate) / 100) * 100
+  const getFeatureName = (featureId: string): string => {
+    if (featureId in featureTranslations) {
+      return featureTranslations[featureId as keyof typeof featureTranslations].name[language as keyof typeof featureTranslations[keyof typeof featureTranslations]['name']]
+    }
+    return features.find(f => f.id === featureId)?.name || featureId;
+  }
+
+  const getFeatureDescription = (featureId: string): string => {
+    if (featureId in featureTranslations) {
+      return featureTranslations[featureId as keyof typeof featureTranslations].description[language as keyof typeof featureTranslations[keyof typeof featureTranslations]['description']]
+    }
+    return features.find(f => f.id === featureId)?.description || '';
   }
 
   return (
     <div>
-      <h2 className="mb-6 text-2xl font-bold">Seleccioná Características</h2>
+      <h2 className="mb-6 text-2xl font-bold">{title}</h2>
       <p className="mb-6 text-muted-foreground">
-        Elegí las características que necesitás para tu sitio web. Cada característica afectará el costo final.
+        {description}
       </p>
 
       <form onSubmit={handleSubmit}>
@@ -48,7 +138,7 @@ export default function FeaturesForm() {
                 <div className="flex-1">
                   <div className="flex items-center">
                     <Label htmlFor={feature.id} className="text-base font-medium">
-                      {feature.name}
+                      {getFeatureName(feature.id)}
                     </Label>
                     <TooltipProvider>
                       <Tooltip>
@@ -56,12 +146,13 @@ export default function FeaturesForm() {
                           <InfoIcon className="ml-1 h-4 w-4 text-muted-foreground" />
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p className="max-w-xs">{feature.description}</p>
+                          <p className="max-w-xs">{getFeatureDescription(feature.id)}</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
                   </div>
-                  <p className="text-sm text-muted-foreground">${usdToArs(feature.price).toLocaleString()}</p>
+                  {/* Precio oculto pero elemento mantenido para no afectar la estructura */}
+                  <p className="text-sm text-muted-foreground opacity-0 h-4"></p>
                 </div>
               </div>
             </Card>
@@ -69,10 +160,12 @@ export default function FeaturesForm() {
         </div>
 
         <div className="mt-8 flex justify-between">
-          <Button type="button" variant="outline" onClick={() => setStep(2)}>
-            Atrás
+          <Button type="button" variant="outline" onClick={() => setStep(2)} className="cursor-pointer">
+            {backButton}
           </Button>
-          <Button type="submit">Siguiente</Button>
+          <Button type="submit" className="cursor-pointer">
+            {nextButton}
+          </Button>
         </div>
       </form>
     </div>

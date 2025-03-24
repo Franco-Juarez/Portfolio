@@ -2,7 +2,7 @@
 import Button from "./button";
 import { motion } from 'framer-motion';
 import HamburgerIcon from "../icons/hamburger";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import ExitIcon from "../icons/exitIcon";
 import { usePathname } from "next/navigation";

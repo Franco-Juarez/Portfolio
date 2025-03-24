@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { useEstimateStore } from "@/lib/store"
+import type { Feature } from "@/lib/store"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Check, Download, Send } from "lucide-react"
@@ -301,7 +302,7 @@ export default function ReviewEstimate() {
       }
     };
 
-    const getFeatureName = (feature: any): string => {
+    const getFeatureName = (feature: Feature): string => {
       if (feature.id in featureTranslations) {
         return featureTranslations[feature.id][language as 'en' | 'es'];
       }

@@ -87,7 +87,6 @@ export default function ProjectTypeForm() {
   const timelineStandard = (translations.projectType?.timelineStandard as { en: string, es: string })[language]
   const timelineRush = (translations.projectType?.timelineRush as { en: string, es: string })[language]
   const timelineUrgent = (translations.projectType?.timelineUrgent as { en: string, es: string })[language]
-  const submitButton = (translations.projectType?.submitButton as { en: string, es: string })[language]
   const backButton = (translations.projectType?.backButton as { en: string, es: string })[language]
   const nextButton = (translations.projectType?.nextButton as { en: string, es: string })[language]
   const projectTypeComponent = (translations.projectType?.projectTypeComponent as { en: string, es: string })[language]

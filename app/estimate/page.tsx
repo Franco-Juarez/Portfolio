@@ -13,9 +13,8 @@ import { useLanguage } from "../context/LanguageContext"
 import { translations } from "../data/translations"
 
 export default function EstimatePage() {
-  // Fix the navigation bug by updating the step logic
-  // Import shouldShowFeaturesStep from the store
-  const { step, setStep, calculateTotal, setDollarRate, shouldShowFeaturesStep } = useEstimateStore()
+  // Get step from estimateStore
+  const { step, setDollarRate, calculateTotal } = useEstimateStore()
   const { language } = useLanguage();
 
   // Definimos las traducciones para el estimador si no existen

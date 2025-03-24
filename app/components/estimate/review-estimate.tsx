@@ -4,7 +4,6 @@ import { useState, useEffect } from "react"
 import { useEstimateStore } from "@/lib/store"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
 import { Check, Download, Send } from "lucide-react"
 import { generatePDF } from "@/lib/pdf-generator"
 import { format } from "date-fns"
@@ -351,7 +350,8 @@ export default function ReviewEstimate() {
       return featureTranslations[featureId][language as 'en' | 'es'];
     }
 
-    return selectedFeatures.find(f => f.id === featureId)?.name || featureId;
+    const feature = selectedFeatures.find(f => f.id === featureId);
+    return feature?.name || featureId;
   };
 
   return (

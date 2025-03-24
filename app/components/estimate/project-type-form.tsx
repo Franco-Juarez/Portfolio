@@ -43,7 +43,6 @@ export default function ProjectTypeForm() {
   const title = (translations.projectType?.title as { en: string, es: string })[language]
   const projectTypeWebsite = (translations.projectType?.projectTypeWebsite as { en: string, es: string })[language]
   const projectTypeLabel = (translations.projectType?.projectTypeLabel as { en: string, es: string })[language]
-  const projectTypePlaceholder = (translations.projectType?.projectTypePlaceholder as { en: string, es: string })[language]
   const projectTypeDescription = (translations.projectType?.projectTypeDescription as { en: string, es: string })[language]
   const websiteTypeLabel = (translations.projectType?.websiteTypeLabel as { en: string, es: string })[language]
   const websiteTypePlaceholder = (translations.projectType?.websiteTypePlaceholder as { en: string, es: string })[language]
@@ -73,10 +72,8 @@ export default function ProjectTypeForm() {
   const technologyLabel = (translations.projectType?.technologyLabel as { en: string, es: string })[language]
   const technologyPlaceholder = (translations.projectType?.technologyPlaceholder as { en: string, es: string })[language]
   const technologyDescription = (translations.projectType?.technologyDescription as { en: string, es: string })[language]
-  const technologyOptions = (translations.projectType?.technologyOptions as { en: string, es: string })[language]
   const otherTechnologyLabel = (translations.projectType?.otherTechnologyLabel as { en: string, es: string })[language]
   const otherTechnologyPlaceholder = (translations.projectType?.otherTechnologyPlaceholder as { en: string, es: string })[language]
-  const otherTechnologyDescription = (translations.projectType?.otherTechnologyDescription as { en: string, es: string })[language]
   const hasHostingLabel = (translations.projectType?.hasHostingLabel as { en: string, es: string })[language]
   const hasHostingDescription = (translations.projectType?.hasHostingDescription as { en: string, es: string })[language]
   const hasDesignLabel = (translations.projectType?.hasDesignLabel as { en: string, es: string })[language]
@@ -90,6 +87,7 @@ export default function ProjectTypeForm() {
   const timelineStandard = (translations.projectType?.timelineStandard as { en: string, es: string })[language]
   const timelineRush = (translations.projectType?.timelineRush as { en: string, es: string })[language]
   const timelineUrgent = (translations.projectType?.timelineUrgent as { en: string, es: string })[language]
+  const submitButton = (translations.projectType?.submitButton as { en: string, es: string })[language]
   const backButton = (translations.projectType?.backButton as { en: string, es: string })[language]
   const nextButton = (translations.projectType?.nextButton as { en: string, es: string })[language]
   const projectTypeComponent = (translations.projectType?.projectTypeComponent as { en: string, es: string })[language]
@@ -139,7 +137,6 @@ export default function ProjectTypeForm() {
   const websiteType = form.watch("websiteType")
   const technology = form.watch("technology")
   const projectType = form.watch("projectType")
-  const hoursPackage = form.watch("hoursPackage")
 
   useEffect(() => {
     if (websiteType === "landing") {

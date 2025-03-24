@@ -2,7 +2,7 @@
 import Button from "./button";
 import { motion } from 'framer-motion';
 import HamburgerIcon from "../icons/hamburger";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import ExitIcon from "../icons/exitIcon";
 import { usePathname } from "next/navigation";
@@ -75,7 +75,7 @@ export default function Navbar() {
     dark:bg-black-theme/90"
     >
       <span className="text-white-theme font-body text-2xl z-50">
-        <a href="/">
+        <Link href="/">
           <Image
             src={'logo.svg'}
             className="main-logo"
@@ -83,7 +83,7 @@ export default function Navbar() {
             height={80}
             width={80}
           />
-        </a>
+        </Link>
       </span>
       <nav>
         <motion.ul

@@ -266,7 +266,6 @@ export const useEstimateStore = create<EstimateState>()(
 
       calculateTotal: () => {
         const {
-          websiteType,
           pages,
           designComplexity,
           timeline,

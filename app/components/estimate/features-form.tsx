@@ -86,7 +86,7 @@ const featureTranslations = {
 };
 
 export default function FeaturesForm() {
-  const { projectRequirements, toggleFeature, setStep, dollarRate } = useEstimateStore()
+  const { projectRequirements, toggleFeature, setStep } = useEstimateStore()
   const { features } = projectRequirements
   const { language } = useLanguage()
 

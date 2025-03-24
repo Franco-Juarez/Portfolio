@@ -2,7 +2,14 @@
 
 import { jsPDF } from "jspdf"
 import autoTable from "jspdf-autotable"
-import type { ClientInfo, ProjectRequirements } from "./store"
+import type { ClientInfo, ProjectRequirements, Feature } from "./store"
+
+// Define un tipo para jsPDF extendido con autoTable
+interface PDFWithAutoTable extends jsPDF {
+  lastAutoTable: {
+    finalY: number;
+  };
+}
 
 interface GeneratePDFProps {
   clientInfo: ClientInfo
@@ -130,7 +137,7 @@ export const generatePDF = async ({ clientInfo, projectRequirements, totalCost, 
   const selectedFeatures = projectRequirements.features.filter((feature) => feature.selected)
 
   if (selectedFeatures.length > 0) {
-    const lastTable = (doc as any).lastAutoTable
+    const lastTable = (doc as PDFWithAutoTable).lastAutoTable
     const featuresY = lastTable.finalY + 10
 
     doc.setFontSize(14)
@@ -168,7 +175,7 @@ export const generatePDF = async ({ clientInfo, projectRequirements, totalCost, 
       }
     };
 
-    const getFeatureName = (feature: any): string => {
+    const getFeatureName = (feature: Feature): string => {
       if (feature.id in featureTranslations) {
         return featureTranslations[feature.id][language as 'en' | 'es'];
       }
@@ -191,7 +198,7 @@ export const generatePDF = async ({ clientInfo, projectRequirements, totalCost, 
   }
 
   // Add total cost
-  const lastTable = (doc as any).lastAutoTable
+  const lastTable = (doc as PDFWithAutoTable).lastAutoTable
   const totalY = lastTable.finalY + 15
 
   // Calculate the total in USD if English
@@ -217,7 +224,7 @@ export const generatePDF = async ({ clientInfo, projectRequirements, totalCost, 
   }
 
   // Add terms and conditions
-  const termsY = (doc as any).lastAutoTable.finalY + 15
+  const termsY = (doc as PDFWithAutoTable).lastAutoTable.finalY + 15
 
   doc.setFontSize(12)
   doc.text(isEnglish ? "Terms and Conditions" : "Términos y Condiciones", 20, termsY)

@@ -18,7 +18,7 @@ export default function ReviewEstimate() {
   const [isDownloading, setIsDownloading] = useState(false)
   const { language } = useLanguage()
 
-  const title = (translations.projectType?.title as { en: string, es: string })[language]
+  const title = (translations.reviewEstimate?.title as { en: string, es: string })[language]
   const subtitle = (translations.reviewEstimate?.subtitle as { en: string, es: string })[language]
   const clientInfoTitle = (translations.reviewEstimate?.clientInfoTitle as { en: string, es: string })[language]
   const websiteType = (translations.reviewEstimate?.websiteType as { en: string, es: string })[language]
@@ -84,7 +84,7 @@ export default function ReviewEstimate() {
       return (
         <>
           <div className="text-4xl font-bold mb-1">
-            ${totalCost.toLocaleString()}
+            $ARS {totalCost.toLocaleString()}
           </div>
           <p className="text-muted-foreground">{basedOnInfo}</p>
         </>

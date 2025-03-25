@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 const LavaLamp = () => {
 
   const [theme, setTheme] = useState("dark")
-  const [colors, setColors] = useState(['primary:#FFFCF5', 'secondary:#FFAA00'])
+  const [colors, setColors] = useState(['primary:#FFFCF5', 'secondary:#FFAA01'])
 
   useEffect(() => {
     const script = document.createElement('script');

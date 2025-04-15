@@ -281,12 +281,12 @@ export const translations = {
         es: "Mar 10, 2024"
       },
       repoLink: {
-        en: "https://github.com/Franco-Juarez/SwwwingCoWork",
-        es: "https://github.com/Franco-Juarez/SwwwingCoWork"
+        en: "https://restoexp.com/",
+        es: "https://restoexp.com/"
       },
       deployLink: {
-        en: "https://swwwing-co-work.vercel.app/",
-        es: "https://swwwing-co-work.vercel.app/"
+        en: "https://restoexp.com/",
+        es: "https://restoexp.com/"
       },
       tools: ["React", "Chakra-UI", "Vite"]
     },

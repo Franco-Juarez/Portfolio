@@ -146,13 +146,6 @@ export default function Navbar() {
           <motion.li
             variants={childVariants}
           >
-            <a href="/presupuestador" className="before:content-['5.'] before:mr-0.5 dark:before:text-orange-theme before:text-orange-light-theme hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer">
-              {navbar.presupuestador[language]}
-            </a>
-          </motion.li>
-          <motion.li
-            variants={childVariants}
-          >
             <Button
               btnText={navbar.resume[language]}
               link={"https://drive.google.com/file/d/1L0FWmPD6H77n6xFUnkmzazxMFmXRXm9Y/view?usp=sharing"}
@@ -222,11 +215,6 @@ export default function Navbar() {
                 {navbar.contact[language]}
               </Link>
             )}
-          </li>
-          <li>
-            <a className="before:content-['5.'] before:mr-0.5 before:text-orange-theme hover:text-orange-theme" onClick={handleMobileNav} href="/presupuestador">
-              {navbar.presupuestador[language]}
-            </a>
           </li>
           <li onClick={handleMobileNav}>
             <Button

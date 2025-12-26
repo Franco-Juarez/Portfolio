@@ -32,12 +32,18 @@ export default function ExperienceSection() {
       >{experience.title[language]}</h2>
       <header>
         <nav>
-          <ul className="text-black-theme dark:text-white-theme flex space-x-2 lg:space-x-4">
+          <ul className="text-black-theme dark:text-white-theme flex flex-wrap gap-2 lg:gap-4">
             <li onClick={() => handleRender("restoExperience")} className={activeSection === "restoExperience" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
               {experience.restoExperience[language]}
             </li>
-            <li onClick={() => handleRender("swwwing")} className={activeSection === "swwwing" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
-              {experience.swwwing[language]}
+            <li onClick={() => handleRender("poiseDigital")} className={activeSection === "poiseDigital" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
+              {experience.poiseDigital[language]}
+            </li>
+            <li onClick={() => handleRender("valuge")} className={activeSection === "valuge" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
+              {experience.valuge[language]}
+            </li>
+            <li onClick={() => handleRender("magnusHRS")} className={activeSection === "magnusHRS" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
+              {experience.magnusHRS[language]}
             </li>
           </ul>
         </nav>
@@ -65,6 +71,45 @@ export default function ExperienceSection() {
           jobDescription={[
             experience.wordpressDev.description1[language],
             experience.wordpressDev.description2[language]
+          ]}
+        />
+      }
+      {activeSection === "poiseDigital" &&
+        <ExperienceDescription
+          position={experience.poiseFullStack.position[language]}
+          company={experience.poiseFullStack.company[language]}
+          companyLink="https://poisedigitalstudio.com"
+          jobDate={experience.poiseFullStack.jobDate[language]}
+          jobLocation={experience.poiseFullStack.jobLocation[language]}
+          jobDescription={[
+            experience.poiseFullStack.description1[language],
+            experience.poiseFullStack.description2[language]
+          ]}
+        />
+      }
+      {activeSection === "valuge" &&
+        <ExperienceDescription
+          position={experience.valugeFullStack.position[language]}
+          company={experience.valugeFullStack.company[language]}
+          companyLink="https://valuge.com.ar"
+          jobDate={experience.valugeFullStack.jobDate[language]}
+          jobLocation={experience.valugeFullStack.jobLocation[language]}
+          jobDescription={[
+            experience.valugeFullStack.description1[language],
+            experience.valugeFullStack.description2[language]
+          ]}
+        />
+      }
+      {activeSection === "magnusHRS" &&
+        <ExperienceDescription
+          position={experience.magnusWebDev.position[language]}
+          company={experience.magnusWebDev.company[language]}
+          companyLink="https://magnushrs.com"
+          jobDate={experience.magnusWebDev.jobDate[language]}
+          jobLocation={experience.magnusWebDev.jobLocation[language]}
+          jobDescription={[
+            experience.magnusWebDev.description1[language],
+            experience.magnusWebDev.description2[language]
           ]}
         />
       }

@@ -68,11 +68,6 @@ export default function Contact() {
           link={"mailto:franjuaache@gmail.com"}
           isExternal={false}
         />
-        <Button
-          btnText={contact.letMeet[language]}
-          link={"https://calendly.com/franjuaache/30min"}
-          isExternal={true}
-        />
       </div>
     </motion.section>
   )

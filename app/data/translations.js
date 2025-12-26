@@ -38,12 +38,12 @@ export const translations = {
       es: "¡Construyamos juntos!"
     },
     description: {
-      en: "I'm a Frontend Developer passionate about creating exceptional digital experiences. I excel in developing accessible, user-friendly products, with a focus on crafting",
-      es: "Soy un Desarrollador Frontend apasionado por crear experiencias digitales excepcionales. Me destaco en el desarrollo de productos accesibles y amigables, con un enfoque en crear"
+      en: "Full Stack Developer who turns ideas into real products. I build web apps that work, look good, and",
+      es: "Desarrollador Full Stack que transforma ideas en productos reales. Creo aplicaciones web que funcionan, se ven bien y"
     },
     efficientWebsites: {
-      en: "efficient websites.",
-      es: "sitios web eficientes."
+      en: "don't break.",
+      es: "no se rompen."
     },
     letsChat: {
       en: "Let's chat!",
@@ -74,12 +74,12 @@ export const translations = {
       es: "Aunque esto pueda sonar aleatorio, esta formación diversa ha sido fundamental en mi enfoque de la programación."
     },
     codingPhilosophy1: {
-      en: "Understanding syntax and structure isn´t just about languages; it forms the rock of my coding philosophy. I´ve delved deep into",
-      es: "Entender la sintaxis y la estructura no se trata solo de idiomas; forma la base de mi filosofía de programación. Me he adentrado en"
+      en: "Understanding syntax and structure isn´t just about languages; it forms the rock of my coding philosophy. I´ve specialized in",
+      es: "Entender la sintaxis y la estructura no se trata solo de idiomas; forma la base de mi filosofía de programación. Me he especializado en"
     },
     techStack: {
-      en: "JavaScript, HTML, CSS,",
-      es: "JavaScript, HTML, CSS,"
+      en: "TypeScript, HTML, CSS,",
+      es: "TypeScript, HTML, CSS,"
     },
     and: {
       en: "and",
@@ -90,40 +90,40 @@ export const translations = {
       es: "React.js,"
     },
     frameworks: {
-      en: "exploring frameworks like",
-      es: "explorando frameworks como"
+      en: "working with frameworks like",
+      es: "trabajando con frameworks como"
     },
     nextjs: {
       en: "Next.js",
       es: "Next.js"
     },
     efficientWebsites: {
-      en: "to construct efficient, delightful-to-use websites. In my tech toolkit, platforms like",
-      es: "para construir sitios web eficientes y agradables de usar. En mi kit de herramientas tecnológicas, plataformas como"
+      en: "to construct efficient, scalable web platforms. My tech toolkit includes",
+      es: "para construir plataformas web eficientes y escalables. Mi kit de herramientas incluye"
     },
     firebase: {
-      en: "Firebase",
-      es: "Firebase"
+      en: "PostgreSQL and Prisma ORM",
+      es: "PostgreSQL y Prisma ORM"
     },
     backendWizardry: {
-      en: "for backend wizardry and",
-      es: "para el manejo del backend y"
+      en: "for database management, and ",
+      es: "para gestión de bases de datos, y "
     },
     dynamicDev: {
-      en: "for dynamic web development have been my go-to allies in creating scalable solutions.",
-      es: "para el desarrollo web dinámico han sido mis aliados principales para crear soluciones escalables."
+      en: "modern DevOps practices with VPS infrastructure, Nginx, PM2, and CI/CD pipelines for deploying robust production applications.",
+      es: "prácticas modernas de DevOps con infraestructura VPS, Nginx, PM2 y pipelines CI/CD para desplegar aplicaciones robustas en producción."
     },
     currentStudies: {
-      en: "Currently, I am further enhancing my technical expertise by studying a",
-      es: "Actualmente, estoy ampliando mis conocimientos técnicos estudiando una"
+      en: "I have completed my",
+      es: "Completé mi"
     },
     techDegree: {
-      en: "Programming Technical Degree",
-      es: "Tecnicatura en Programación"
+      en: "University Technical Degree in Programming",
+      es: "Tecnicatura Universitaria en Programación"
     },
     utn: {
-      en: "at the National Technological University (UTN). This academic pursuit is sharpening my skills and broadening my understanding of advanced programming concepts and techniques.",
-      es: "en la Universidad Tecnológica Nacional (UTN). Este estudio académico está afilando mis habilidades y ampliando mi comprensión de conceptos y técnicas avanzadas de programación."
+      en: "at the National Technological University (UTN). This academic achievement has sharpened my skills and broadened my understanding of advanced programming concepts, software architecture, and modern development practices.",
+      es: "en la Universidad Tecnológica Nacional (UTN). Este logro académico ha afilado mis habilidades y ampliado mi comprensión de conceptos avanzados de programación, arquitectura de software y prácticas modernas de desarrollo."
     },
     learning: {
       en: "Learning, for me, isn´t a solitary endeavor. It´s about sharing knowledge,",
@@ -135,7 +135,7 @@ export const translations = {
     },
     thriving: {
       en: "and thriving in collaborative environments. I thrive on team synergy, exchanging ideas, and contributing to a culture of",
-      es: "y prosperar en entornos colaborativos. Me desarrollo con la sinergia del equipo, intercambiando ideas y contribuyendo a una cultura de"
+      es: "y prosperar en entornos colaborativos. Creo que la sinergia del equipo y el intercambio de ideas son claves para construir una cultura de"
     },
     continuousLearning: {
       en: "continuous learning.",
@@ -161,9 +161,21 @@ export const translations = {
       en: "Resto Experience",
       es: "Resto Experience"
     },
-    swwwing: {
-      en: "Swwwing Agency",
-      es: "Agencia Swwwing"
+    poiseDigital: {
+      en: "Poise Digital Studio",
+      es: "Poise Digital Studio"
+    },
+    valuge: {
+      en: "Valuge",
+      es: "Valuge"
+    },
+    magnusHRS: {
+      en: "Magnus HRS",
+      es: "Magnus HRS"
+    },
+    freelance: {
+      en: "Freelance",
+      es: "Freelance"
     },
     // Resto Experience - Web Design & Development Manager
     webDesignDevManager: {
@@ -219,33 +231,87 @@ export const translations = {
         es: "Además de mi rol de desarrollo, me encargo del proceso esencial de optimización de proyectos, adaptándolos a diversas resoluciones. Este paso final asegura que los sitios web funcionen de manera óptima en varios dispositivos y tamaños de pantalla. Al combinar experiencia técnica con un ojo agudo para la integración de diseño, contribuyo a crear plataformas digitales que no solo cumplen con los requisitos funcionales, sino que también se destacan en ofrecer una experiencia en línea estéticamente agradable y fácil de usar."
       }
     },
-    // Swwwing - Front-end Developer
-    frontendDev: {
+    // Poise Digital Studio - Full Stack Developer & DevOps
+    poiseFullStack: {
       position: {
-        en: "Front-end Developer",
-        es: "Desarrollador Front-end"
+        en: "Full Stack Developer & DevOps",
+        es: "Desarrollador Full Stack & DevOps"
       },
       company: {
-        en: "Swwwing Agency",
-        es: "Agencia Swwwing"
+        en: "Poise Digital Studio",
+        es: "Poise Digital Studio"
       },
       jobDate: {
-        en: "Sep 2023 - Present",
-        es: "Sep 2023 - Presente"
+        en: "Jan 2024 - Present",
+        es: "Ene 2024 - Presente"
       },
       jobLocation: {
         en: "Buenos Aires, Argentina",
         es: "Buenos Aires, Argentina"
       },
       description1: {
-        en: "I specialized in crafting dynamic and efficient websites using React.js, while integrating UI libraries such as Chakra UI and Material UI. Leveraging Git for version control, I operated as an independent contractor, collaborating closely with diverse clients to translate their visions into responsive and scalable digital solutions.",
-        es: "Me especialicé en crear sitios web dinámicos y eficientes utilizando React.js, mientras integraba bibliotecas de UI como Chakra UI y Material UI. Utilizando Git para el control de versiones, trabajé como contratista independiente, colaborando estrechamente con diversos clientes para traducir sus visiones en soluciones digitales responsivas y escalables."
+        en: "Comprehensive maintenance of corporate website including content management, security updates, and development of automation scripts for recurring operations. Managed full-stack infrastructure using Next.js (App Router) and Strapi headless CMS on VPS with Nginx and PM2.",
+        es: "Mantenimiento integral de sitio web corporativo incluyendo gestión de contenidos, actualizaciones de seguridad y desarrollo de scripts de automatización para operaciones recurrentes. Gestión de infraestructura full-stack usando Next.js (App Router) y Strapi headless CMS en VPS con Nginx y PM2."
       },
       description2: {
-        en: "Collaborated with the design team to generate creative concepts addressing client challenges. Worked collaboratively to explore new possibilities and scalable solutions. Ensured cohesive user experiences across various web apps through collaboration with designers and developers. Implemented Vercel and Vite for efficient project compilation, ensuring seamless integration of new features and continuous project management.",
-        es: "Colaboré con el equipo de diseño para generar conceptos creativos que abordaran los desafíos de los clientes. Trabajé de manera colaborativa para explorar nuevas posibilidades y soluciones escalables. Aseguré experiencias de usuario cohesivas en varias aplicaciones web a través de la colaboración con diseñadores y desarrolladores. Implementé Vercel y Vite para una compilación eficiente de proyectos, garantizando una integración perfecta de nuevas funciones y una gestión continua de proyectos."
+        en: "Ensured stable performance through server optimization and continuous monitoring. Collaborated directly with stakeholders to align technical solutions with business objectives.",
+        es: "Aseguré un rendimiento estable a través de optimización del servidor y monitoreo continuo. Colaboré directamente con stakeholders para alinear soluciones técnicas con objetivos de negocio."
       }
-    }
+    },
+    // Valuge - Full Stack Developer
+    valugeFullStack: {
+      position: {
+        en: "Full Stack Developer",
+        es: "Desarrollador Full Stack"
+      },
+      company: {
+        en: "Valuge",
+        es: "Valuge"
+      },
+      jobDate: {
+        en: "2024",
+        es: "2024"
+      },
+      jobLocation: {
+        en: "Buenos Aires, Argentina",
+        es: "Buenos Aires, Argentina"
+      },
+      description1: {
+        en: "Developed a comprehensive web platform for a dermatological cosmetics laboratory with over 20 years of experience. Built a full-stack solution using Next.js and TypeScript for the frontend, PostgreSQL with Prisma ORM for the database, and implemented JWT authentication with Zod validation.",
+        es: "Desarrollé una plataforma web integral para un laboratorio de cosmética dermatológica con más de 20 años de trayectoria. Construí una solución full-stack usando Next.js y TypeScript para el frontend, PostgreSQL con Prisma ORM para la base de datos, e implementé autenticación JWT con validación Zod."
+      },
+      description2: {
+        en: "Implemented key features including a complete admin panel for managing products, pharmacies and users, advanced catalog with accent-insensitive search, pharmacy locator with Google Maps integration, PDF coupon generation with React PDF and Puppeteer, and WhatsApp integration. Managed VPS infrastructure on Ubuntu 24 with Nginx reverse proxy, PM2 process manager, automated CI/CD with GitHub Actions, and security layers with Cloudflare (rate limiting, WAF, SQL injection protection).",
+        es: "Implementé características clave incluyendo panel de administración completo para gestión de productos, farmacias y usuarios, catálogo avanzado, localizador de farmacias con integración de Google Maps, generación de cupones PDF y envío de mensajes con WhatsApp. Gestioné infraestructura VPS en Ubuntu 24 con Nginx, PM2 para gestión de procesos, CI/CD automatizado con GitHub Actions, y capas de seguridad con Cloudflare (rate limiting, WAF, protección SQL injection)."
+      }
+    },
+    // Magnus HRS - Web Developer
+    magnusWebDev: {
+      position: {
+        en: "Web Developer",
+        es: "Desarrollador Web"
+      },
+      company: {
+        en: "Magnus HRS",
+        es: "Magnus HRS"
+      },
+      jobDate: {
+        en: "2024",
+        es: "2024"
+      },
+      jobLocation: {
+        en: "Toronto, Canada",
+        es: "Toronto, Canadá"
+      },
+      description1: {
+        en: "Developed an institutional website for a leading Canadian healthcare staffing agency. The project required deep understanding of the healthcare industry and its challenges to effectively communicate the company's value proposition to two distinct audiences: employers and healthcare professionals.",
+        es: "Desarrollé un sitio web institucional para una agencia canadiense líder en staffing de profesionales de salud. El proyecto requirió un entendimiento profundo de la industria de salud y sus desafíos para comunicar efectivamente la propuesta de valor de la empresa a dos audiencias distintas: empleadores y profesionales de salud."
+      },
+      description2: {
+        en: "Built using WordPress with custom components for advanced interactivity. Implemented conversion-oriented design with clear CTAs, optimized service pages (Travel Nursing, Staffing Solutions, Job Placement), integrated contact and application forms, and initial SEO setup with Yoast.",
+        es: "Para su construcción, utilizé Wordpress con componentes custom para interactividad avanzada. Implementé diseño orientado a conversión con CTAs claros, páginas de servicios optimizadas (Travel Nursing, Staffing Solutions, Job Placement), formularios de contacto y aplicación integrados y configuración inicial de SEO con Yoast."
+      }
+    },
   },
 
   // Work section
@@ -273,46 +339,94 @@ export const translations = {
         es: "Resto Experience"
       },
       description: {
-        en: "Official website of the digital marketing agency Resto Experience, specialized in the gastronomy industry. Built using WordPress and Elementor Pro as the page builder plugin.",
-        es: "Sitio web oficial de la agencia de marketing digital Resto Experience, especializada en la industria gastronómica. Construido utilizando WordPress y Elementor Pro como plugin de generador de páginas."
+        en: "Official website of the digital marketing agency Resto Experience, specialized in the gastronomy industry. Built using WordPress and Elementor Pro as the page builder plugin, featuring custom integrations and optimized performance.",
+        es: "Sitio web oficial de la agencia de marketing digital Resto Experience, especializada en la industria gastronómica. Construido utilizando WordPress y Elementor Pro como plugin de generador de páginas, con integraciones personalizadas y rendimiento optimizado."
       },
       date: {
-        en: "Mar 10, 2024",
-        es: "Mar 10, 2024"
+        en: "2023",
+        es: "2023"
       },
       repoLink: {
-        en: "https://restoexp.com/",
-        es: "https://restoexp.com/"
+        en: "",
+        es: ""
       },
       deployLink: {
         en: "https://restoexp.com/",
         es: "https://restoexp.com/"
       },
-      tools: ["React", "Chakra-UI", "Vite"]
+      tools: ["WordPress", "Elementor Pro", "Custom Integrations"]
     },
     {
-      id: "swwwingCoWork",
+      id: "magnusHRS",
       title: {
-        en: "Links Co-work",
-        es: "Links Co-work"
+        en: "Magnus HRS",
+        es: "Magnus HRS"
       },
       description: {
-        en: "This project replicates the functionalities and interactivity of a real estate website, enabling the filtering of properties while communicating the company's identity.",
-        es: "Este proyecto replica las funcionalidades y la interacción de un sitio web de bienes raíces, permitiendo el filtrado de propiedades mientras comunica la identidad de la empresa."
+        en: "Institutional website for a leading Canadian healthcare staffing agency. WordPress-based solution with custom components, conversion-oriented design, and basic SEO setup.",
+        es: "Sitio web institucional para agencia canadiense líder en staffing de profesionales de salud. Solución basada en WordPress con componentes personalizados, diseño orientado a conversión y configuración básica de SEO."
       },
       date: {
-        en: "Sep 15, 2023",
-        es: "Sep 15, 2023"
+        en: "2025",
+        es: "2025"
       },
       repoLink: {
-        en: "https://github.com/Franco-Juarez/SwwwingCoWork",
-        es: "https://github.com/Franco-Juarez/SwwwingCoWork"
+        en: "",
+        es: ""
       },
       deployLink: {
-        en: "https://swwwing-co-work.vercel.app/",
-        es: "https://swwwing-co-work.vercel.app/"
+        en: "https://magnushrs.com",
+        es: "https://magnushrs.com"
       },
-      tools: ["React", "Chakra-UI", "Vite"]
+      tools: ["WordPress", "Yoast SEO", "Custom Components"]
+    },
+    {
+      id: "poiseDigital",
+      title: {
+        en: "Poise Digital Studio",
+        es: "Poise Digital Studio"
+      },
+      description: {
+        en: "Corporate website maintenance and full-stack infrastructure management. Next.js with Strapi headless CMS, multilingual support (EN/ES), VPS hosting with Nginx reverse proxy, and continuous monitoring for optimal performance.",
+        es: "Mantenimiento de sitio web corporativo y gestión de infraestructura full-stack. Next.js con Strapi headless CMS, soporte multilenguaje (EN/ES), hosting VPS con Nginx reverse proxy y monitoreo continuo para rendimiento óptimo."
+      },
+      date: {
+        en: "2025",
+        es: "2025"
+      },
+      repoLink: {
+        en: "",
+        es: ""
+      },
+      deployLink: {
+        en: "https://poisedigitalstudio.com",
+        es: "https://poisedigitalstudio.com"
+      },
+      tools: ["Next.js", "Strapi", "VPS", "Nginx", "PM2"]
+    },
+    {
+      id: "invyLab",
+      title: {
+        en: "Invy Lab",
+        es: "Invy Lab"
+      },
+      description: {
+        en: "Developed a custom reusable WordPress plugin for managing web invitations and event organization. The plugin enables comprehensive guest management including confirmations, dietary restrictions, transportation coordination, and more through a centralized admin panel.",
+        es: "Desarrollé un plugin personalizado de WordPress para la gestión de invitaciones web y organización de eventos. Permite la gestión integral de invitados incluyendo confirmaciones, restricciones alimentarias, coordinación de traslados desde un panel de administración."
+      },
+      date: {
+        en: "2025",
+        es: "2025"
+      },
+      repoLink: {
+        en: "",
+        es: ""
+      },
+      deployLink: {
+        en: "https://invylab.com.ar",
+        es: "https://invylab.com.ar"
+      },
+      tools: ["WordPress", "Custom Plugin Development", "PHP", "JavaScript"]
     }
   ],
 
@@ -334,12 +448,7 @@ export const translations = {
     sayHello: {
       en: "Say Hello",
       es: "Enviame un mail"
-    },
-    letMeet: {
-      en: "Let's meet up",
-      es: "Agendá una reunión"
     }
-
   },
 
   // Footer

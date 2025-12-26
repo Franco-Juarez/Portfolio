@@ -5,9 +5,9 @@ import Button from "./button";
 import ReactIcon from "../icons/reactIcon";
 import HtmlIcon from "../icons/htmlIcon";
 import CssIcon from "../icons/cssIcon";
-import JsIcon from "../icons/jsIcon";
+import TypeScriptIcon from "../icons/typescriptIcon";
+import PostgresIcon from "../icons/postgresIcon";
 import GitIcon from "../icons/gitIcon";
-import WordpressIcon from "../icons/wordpressIcon";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
 
@@ -94,9 +94,6 @@ export default function About() {
               {about.firebase[language]}
             </span>
             {about.backendWizardry[language]}
-            <span className="text-orange-light-theme dark:text-orange-theme mx-1">
-              Vercel
-            </span>
             {about.dynamicDev[language]}
           </p>
           <p className="text-base">
@@ -133,13 +130,13 @@ export default function About() {
             ">
               {about.everydayTools[language]}
             </h2>
-            <div className="flex space-x-2">
+            <div className="flex flex-wrap gap-2">
               <HtmlIcon />
               <CssIcon />
-              <JsIcon />
+              <TypeScriptIcon />
               <ReactIcon />
+              <PostgresIcon />
               <GitIcon />
-              <WordpressIcon />
             </div>
           </div>
         </article>

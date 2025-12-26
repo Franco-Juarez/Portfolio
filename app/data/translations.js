@@ -442,8 +442,8 @@ export const translations = {
       es: "Hablemos!"
     },
     contactText: {
-      en: "I´m genuinely excited about the possibility of contributing my mix of skills and enthusiasm to a team that values innovation and creativity.",
-      es: "Estoy encantado de poder contribuir con mis conocimientos y entusiasmo a un equipo que priorice la innovación y el pensamiento creativo."
+      en: "I´m genuinely excited about the possibility of contributing my mix of skills and enthusiasm to your team.",
+      es: "Encantado de poder contribuir con mis conocimientos a tu equipo."
     },
     sayHello: {
       en: "Say Hello",

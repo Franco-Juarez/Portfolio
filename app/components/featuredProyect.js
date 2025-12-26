@@ -3,7 +3,6 @@
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion'
 import Image from "next/image";
-import LinkIcon from "../icons/linkIcon";
 import ValugeWeb from "../img/valugeWeb.png"
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";

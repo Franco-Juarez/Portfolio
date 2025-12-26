@@ -1,6 +1,4 @@
 'use client'
-import FolderIcon from "../icons/folder";
-import LinkIcon from "../icons/linkIcon";
 import { motion, useInView } from 'framer-motion';
 import { useRef } from "react";
 import { useLanguage } from "../context/LanguageContext";

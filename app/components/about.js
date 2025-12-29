@@ -47,7 +47,7 @@ export default function About() {
           <a href="mailto:franjuaache@gmail.com" className="pb-4 hover:text-orange-light-theme dark:hover:text-orange-theme">franjuaache@gmail.com</a>
           <Button
             btnText={about.resume[language]}
-            link={"https://drive.google.com/file/d/1L0FWmPD6H77n6xFUnkmzazxMFmXRXm9Y/view?usp=sharing"}
+            link={"https://drive.google.com/file/d/1tb6itQpSogQWaJ8Su6QGjyL6xoGmGkYZ/view?usp=sharing"}
             isExternal={true}
           />
         </article>

@@ -148,7 +148,7 @@ export default function Navbar() {
           >
             <Button
               btnText={navbar.resume[language]}
-              link={"https://drive.google.com/file/d/1L0FWmPD6H77n6xFUnkmzazxMFmXRXm9Y/view?usp=sharing"}
+              link={"https://drive.google.com/file/d/1tb6itQpSogQWaJ8Su6QGjyL6xoGmGkYZ/view?usp=sharing"}
               isExternal={true}
             />
           </motion.li>
@@ -219,7 +219,7 @@ export default function Navbar() {
           <li onClick={handleMobileNav}>
             <Button
               btnText={navbar.resume[language]}
-              link={"https://drive.google.com/file/d/1L0FWmPD6H77n6xFUnkmzazxMFmXRXm9Y/view?usp=sharing"}
+              link={"https://drive.google.com/file/d/1tb6itQpSogQWaJ8Su6QGjyL6xoGmGkYZ/view?usp=sharing"}
               isExternal={true}
             />
           </li>

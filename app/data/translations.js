@@ -324,6 +324,29 @@ export const translations = {
       en: "Some of my featured projects",
       es: "Mis proyectos destacados"
     },
+    featured: {
+      name: {
+        en: "MedRoster",
+        es: "MedRoster"
+      },
+      client: {
+        en: "Magnus HRS · Canada",
+        es: "Magnus HRS · Canadá"
+      },
+      description: {
+        en: "Staffing operations platform for a Canadian healthcare agency. Tech lead from architecture to delivery: candidate path from application to placement — pipeline, unfilled needs, applicant records and customer management in one system.",
+        es: "Plataforma de operaciones de staffing para una agencia canadiense de salud. Tech lead de punta a punta: el recorrido del candidato desde la postulación hasta el placement — pipeline, necesidades sin cubrir, postulantes y clientes en un solo sistema."
+      },
+      credit: {
+        en: "With",
+        es: "Junto a"
+      },
+      collaborator: {
+        en: "Paula General",
+        es: "Paula General"
+      },
+      tools: ["Next.js", "PostgreSQL", "TypeScript"]
+    },
     description: {
       en: "This project involves implementing a responsive website using React Js and Chakra UI to bring styles and interactivity to life for the user. Additionally, it includes the integration of a contact form through EmailJS.",
       es: "Este proyecto implica la implementación de un sitio web responsivo utilizando React Js y Chakra UI para dar vida a estilos y funcionalidad para el usuario. Además, incluye la integración de un formulario de contacto a través de EmailJS."
@@ -332,6 +355,30 @@ export const translations = {
 
   // Work cards
   workCardsArray: [
+    {
+      id: "valuge",
+      title: {
+        en: "Valuge",
+        es: "Valuge"
+      },
+      description: {
+        en: "Full-stack platform for a dermatological cosmetics laboratory. Product catalog, pharmacy locator with Google Maps, PDF coupon generation, and a complete admin panel.",
+        es: "Plataforma full-stack para un laboratorio de cosmética dermatológica. Catálogo de productos, localizador de farmacias con Google Maps, generación de cupones PDF y panel de administración."
+      },
+      date: {
+        en: "2025",
+        es: "2025"
+      },
+      repoLink: {
+        en: "",
+        es: ""
+      },
+      deployLink: {
+        en: "https://valuge.com.ar",
+        es: "https://valuge.com.ar"
+      },
+      tools: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"]
+    },
     {
       id: "restoExperience",
       title: {
@@ -403,30 +450,6 @@ export const translations = {
         es: "https://poisedigitalstudio.com"
       },
       tools: ["Next.js", "Strapi", "VPS", "Nginx", "PM2"]
-    },
-    {
-      id: "invyLab",
-      title: {
-        en: "Invy Lab",
-        es: "Invy Lab"
-      },
-      description: {
-        en: "Developed a custom reusable WordPress plugin for managing web invitations and event organization. The plugin enables comprehensive guest management including confirmations, dietary restrictions, transportation coordination, and more through a centralized admin panel.",
-        es: "Desarrollé un plugin personalizado de WordPress para la gestión de invitaciones web y organización de eventos. Permite la gestión integral de invitados incluyendo confirmaciones, restricciones alimentarias, coordinación de traslados desde un panel de administración."
-      },
-      date: {
-        en: "2025",
-        es: "2025"
-      },
-      repoLink: {
-        en: "",
-        es: ""
-      },
-      deployLink: {
-        en: "https://invylab.com.ar",
-        es: "https://invylab.com.ar"
-      },
-      tools: ["WordPress", "Custom Plugin Development", "PHP", "JavaScript"]
     }
   ],
 

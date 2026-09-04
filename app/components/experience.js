@@ -7,11 +7,16 @@ import { translations } from "../data/translations";
 export default function ExperienceSection() {
   const { language } = useLanguage();
   const { experience } = translations;
-  const [activeSection, setActiveSection] = useState("restoExperience");
+  const [activeSection, setActiveSection] = useState("medRoster");
 
   const handleRender = (id) => {
     setActiveSection(id);
   };
+
+  const tabClass = (id) =>
+    activeSection === id
+      ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme"
+      : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer";
 
   return (
     <section id="experience" className="w-full min-h-fit lg:min-h-screen pt-0 pb-4 lg:py-24 space-y-4">
@@ -33,21 +38,50 @@ export default function ExperienceSection() {
       <header>
         <nav>
           <ul className="text-black-theme dark:text-white-theme flex flex-wrap gap-2 lg:gap-4">
-            <li onClick={() => handleRender("restoExperience")} className={activeSection === "restoExperience" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
-              {experience.restoExperience[language]}
+            <li onClick={() => handleRender("medRoster")} className={tabClass("medRoster")}>
+              {experience.medRoster[language]}
             </li>
-            <li onClick={() => handleRender("poiseDigital")} className={activeSection === "poiseDigital" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
+            <li onClick={() => handleRender("magnusHRS")} className={tabClass("magnusHRS")}>
+              {experience.magnusHRS[language]}
+            </li>
+            <li onClick={() => handleRender("poiseDigital")} className={tabClass("poiseDigital")}>
               {experience.poiseDigital[language]}
             </li>
-            <li onClick={() => handleRender("valuge")} className={activeSection === "valuge" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
+            <li onClick={() => handleRender("valuge")} className={tabClass("valuge")}>
               {experience.valuge[language]}
             </li>
-            <li onClick={() => handleRender("magnusHRS")} className={activeSection === "magnusHRS" ? "border-b border-orange-light-theme dark:border-orange-theme cursor-pointer hover:text-orange-light-theme dark:hover:text-orange-theme" : "hover:text-orange-light-theme dark:hover:text-orange-theme cursor-pointer"}>
-              {experience.magnusHRS[language]}
+            <li onClick={() => handleRender("restoExperience")} className={tabClass("restoExperience")}>
+              {experience.restoExperience[language]}
             </li>
           </ul>
         </nav>
       </header>
+      {activeSection === "medRoster" &&
+        <ExperienceDescription
+          position={experience.medRosterTechLead.position[language]}
+          company={experience.medRosterTechLead.company[language]}
+          companyLink="https://magnushrs.com"
+          jobDate={experience.medRosterTechLead.jobDate[language]}
+          jobLocation={experience.medRosterTechLead.jobLocation[language]}
+          jobDescription={[
+            experience.medRosterTechLead.description1[language],
+            experience.medRosterTechLead.description2[language]
+          ]}
+        />
+      }
+      {activeSection === "magnusHRS" &&
+        <ExperienceDescription
+          position={experience.magnusWebDev.position[language]}
+          company={experience.magnusWebDev.company[language]}
+          companyLink="https://magnushrs.com"
+          jobDate={experience.magnusWebDev.jobDate[language]}
+          jobLocation={experience.magnusWebDev.jobLocation[language]}
+          jobDescription={[
+            experience.magnusWebDev.description1[language],
+            experience.magnusWebDev.description2[language]
+          ]}
+        />
+      }
       {activeSection === "restoExperience" &&
         <ExperienceDescription
           position={experience.webDesignDevManager.position[language]}
@@ -97,19 +131,6 @@ export default function ExperienceSection() {
           jobDescription={[
             experience.valugeFullStack.description1[language],
             experience.valugeFullStack.description2[language]
-          ]}
-        />
-      }
-      {activeSection === "magnusHRS" &&
-        <ExperienceDescription
-          position={experience.magnusWebDev.position[language]}
-          company={experience.magnusWebDev.company[language]}
-          companyLink="https://magnushrs.com"
-          jobDate={experience.magnusWebDev.jobDate[language]}
-          jobLocation={experience.magnusWebDev.jobLocation[language]}
-          jobDescription={[
-            experience.magnusWebDev.description1[language],
-            experience.magnusWebDev.description2[language]
           ]}
         />
       }

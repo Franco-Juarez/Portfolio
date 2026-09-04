@@ -169,6 +169,10 @@ export const translations = {
       en: "Valuge",
       es: "Valuge"
     },
+    medRoster: {
+      en: "MedRoster",
+      es: "MedRoster"
+    },
     magnusHRS: {
       en: "Magnus HRS",
       es: "Magnus HRS"
@@ -176,6 +180,33 @@ export const translations = {
     freelance: {
       en: "Freelance",
       es: "Freelance"
+    },
+    // MedRoster - Tech Lead / Full Stack (Magnus HRS · Canada)
+    medRosterTechLead: {
+      position: {
+        en: "Tech Lead / Full Stack",
+        es: "Tech Lead / Full Stack"
+      },
+      company: {
+        en: "Magnus HRS",
+        es: "Magnus HRS"
+      },
+      jobDate: {
+        en: "2025–2026",
+        es: "2025–2026"
+      },
+      jobLocation: {
+        en: "Toronto, Canada",
+        es: "Toronto, Canadá"
+      },
+      description1: {
+        en: "Tech lead on MedRoster, the staffing operations platform for a Canadian healthcare agency — not the institutional WordPress site. Built with Next.js, TypeScript, and PostgreSQL, from architecture through production delivery.",
+        es: "Líder técnico en MedRoster, la plataforma de operaciones de staffing para una agencia canadiense de salud — no el sitio institucional en WordPress. Desarrollada con Next.js, TypeScript y PostgreSQL, de la arquitectura hasta la entrega en producción."
+      },
+      description2: {
+        en: "Own the candidate path from application to placement: pipeline management, unfilled needs, applicant records, and customer management in one unified system.",
+        es: "Responsable del recorrido del candidato desde la postulación hasta el placement: pipeline, necesidades sin cubrir, registros de postulantes y gestión de clientes en un solo sistema."
+      }
     },
     // Resto Experience - Web Design & Development Manager
     webDesignDevManager: {
@@ -188,8 +219,8 @@ export const translations = {
         es: "Resto Experience"
       },
       jobDate: {
-        en: "Mar 2024 - Present",
-        es: "Mar 2024 - Presente"
+        en: "Mar 2024 - Nov 2024",
+        es: "Mar 2024 - Nov 2024"
       },
       jobLocation: {
         en: "Atlanta, United States",
@@ -250,12 +281,12 @@ export const translations = {
         es: "Buenos Aires, Argentina"
       },
       description1: {
-        en: "Comprehensive maintenance of corporate website including content management, security updates, and development of automation scripts for recurring operations. Managed full-stack infrastructure using Next.js (App Router) and Strapi headless CMS on VPS with Nginx and PM2.",
-        es: "Mantenimiento integral de sitio web corporativo incluyendo gestión de contenidos, actualizaciones de seguridad y desarrollo de scripts de automatización para operaciones recurrentes. Gestión de infraestructura full-stack usando Next.js (App Router) y Strapi headless CMS en VPS con Nginx y PM2."
+        en: "Full-stack development and infrastructure ownership for the corporate site: Next.js (App Router) frontend, Strapi headless CMS, and bilingual content (EN/ES). Deployed and operated on VPS with Nginx reverse proxy and PM2 process management.",
+        es: "Desarrollo full-stack e infraestructura del sitio corporativo: frontend Next.js (App Router), Strapi headless CMS y contenido bilingüe (EN/ES). Desplegado y operado en VPS con Nginx como reverse proxy y PM2."
       },
       description2: {
-        en: "Ensured stable performance through server optimization and continuous monitoring. Collaborated directly with stakeholders to align technical solutions with business objectives.",
-        es: "Aseguré un rendimiento estable a través de optimización del servidor y monitoreo continuo. Colaboré directamente con stakeholders para alinear soluciones técnicas con objetivos de negocio."
+        en: "Built automation scripts for recurring operations, handled security updates and server optimization, and collaborated directly with stakeholders to align technical delivery with business goals.",
+        es: "Scripts de automatización para operaciones recurrentes, actualizaciones de seguridad, optimización de servidor y colaboración directa con stakeholders para alinear la entrega técnica con los objetivos del negocio."
       }
     },
     // Valuge - Full Stack Developer
@@ -296,20 +327,20 @@ export const translations = {
         es: "Magnus HRS"
       },
       jobDate: {
-        en: "2024",
-        es: "2024"
+        en: "2025–2026",
+        es: "2025–2026"
       },
       jobLocation: {
         en: "Toronto, Canada",
         es: "Toronto, Canadá"
       },
       description1: {
-        en: "Developed an institutional website for a leading Canadian healthcare staffing agency. The project required deep understanding of the healthcare industry and its challenges to effectively communicate the company's value proposition to two distinct audiences: employers and healthcare professionals.",
-        es: "Desarrollé un sitio web institucional para una agencia canadiense líder en staffing de profesionales de salud. El proyecto requirió un entendimiento profundo de la industria de salud y sus desafíos para comunicar efectivamente la propuesta de valor de la empresa a dos audiencias distintas: empleadores y profesionales de salud."
+        en: "Institutional website for a Canadian healthcare staffing agency. WordPress with custom components and conversion-oriented design — clear CTAs and service pages (Travel Nursing, Staffing, Job Placement), contact and application forms, and Yoast SEO. Audiences: employers and healthcare professionals.",
+        es: "Sitio institucional para agencia canadiense de staffing de salud. WordPress con componentes custom y diseño orientado a conversión (CTAs, páginas Travel Nursing / Staffing / Job Placement), formularios y Yoast SEO. Audiencias: empleadores y profesionales."
       },
       description2: {
-        en: "Built using WordPress with custom components for advanced interactivity. Implemented conversion-oriented design with clear CTAs, optimized service pages (Travel Nursing, Staffing Solutions, Job Placement), integrated contact and application forms, and initial SEO setup with Yoast.",
-        es: "Para su construcción, utilizé Wordpress con componentes custom para interactividad avanzada. Implementé diseño orientado a conversión con CTAs claros, páginas de servicios optimizadas (Travel Nursing, Staffing Solutions, Job Placement), formularios de contacto y aplicación integrados y configuración inicial de SEO con Yoast."
+        en: "Delivered a polished, performance-focused marketing site that communicates Magnus HRS's value proposition to both hiring organizations and clinical talent.",
+        es: "Sitio de marketing pulido y orientado al rendimiento que comunica la propuesta de valor de Magnus HRS tanto a organizaciones contratantes como a profesionales clínicos."
       }
     },
   },
@@ -356,6 +387,30 @@ export const translations = {
   // Work cards
   workCardsArray: [
     {
+      id: "poiseDigital",
+      title: {
+        en: "Poise Digital Studio",
+        es: "Poise Digital Studio"
+      },
+      description: {
+        en: "Full-stack corporate site with Next.js and Strapi headless CMS, bilingual EN/ES, and production infrastructure on VPS — Nginx, PM2, and continuous monitoring.",
+        es: "Sitio corporativo full-stack con Next.js y Strapi headless CMS, bilingüe EN/ES, e infraestructura en producción en VPS — Nginx, PM2 y monitoreo continuo."
+      },
+      date: {
+        en: "2025",
+        es: "2025"
+      },
+      repoLink: {
+        en: "",
+        es: ""
+      },
+      deployLink: {
+        en: "https://poisedigitalstudio.com",
+        es: "https://poisedigitalstudio.com"
+      },
+      tools: ["Next.js", "Strapi", "VPS", "Nginx", "PM2"]
+    },
+    {
       id: "valuge",
       title: {
         en: "Valuge",
@@ -380,6 +435,30 @@ export const translations = {
       tools: ["Next.js", "TypeScript", "PostgreSQL", "Prisma"]
     },
     {
+      id: "magnusHRS",
+      title: {
+        en: "Magnus HRS",
+        es: "Magnus HRS"
+      },
+      description: {
+        en: "Institutional website for a Canadian healthcare staffing agency. WordPress with custom components, conversion-oriented design (Travel Nursing, Staffing, Job Placement), forms, and Yoast SEO.",
+        es: "Sitio institucional para agencia canadiense de staffing de salud. WordPress con componentes custom, diseño orientado a conversión (Travel Nursing, Staffing, Job Placement), formularios y Yoast SEO."
+      },
+      date: {
+        en: "2025–2026",
+        es: "2025–2026"
+      },
+      repoLink: {
+        en: "",
+        es: ""
+      },
+      deployLink: {
+        en: "https://magnushrs.com",
+        es: "https://magnushrs.com"
+      },
+      tools: ["WordPress", "Yoast SEO", "Custom Components"]
+    },
+    {
       id: "restoExperience",
       title: {
         en: "Resto Experience",
@@ -402,54 +481,6 @@ export const translations = {
         es: "https://restoexp.com/"
       },
       tools: ["WordPress", "Elementor Pro", "Custom Integrations"]
-    },
-    {
-      id: "magnusHRS",
-      title: {
-        en: "Magnus HRS",
-        es: "Magnus HRS"
-      },
-      description: {
-        en: "Institutional website for a leading Canadian healthcare staffing agency. WordPress-based solution with custom components, conversion-oriented design, and basic SEO setup.",
-        es: "Sitio web institucional para agencia canadiense líder en staffing de profesionales de salud. Solución basada en WordPress con componentes personalizados, diseño orientado a conversión y configuración básica de SEO."
-      },
-      date: {
-        en: "2025",
-        es: "2025"
-      },
-      repoLink: {
-        en: "",
-        es: ""
-      },
-      deployLink: {
-        en: "https://magnushrs.com",
-        es: "https://magnushrs.com"
-      },
-      tools: ["WordPress", "Yoast SEO", "Custom Components"]
-    },
-    {
-      id: "poiseDigital",
-      title: {
-        en: "Poise Digital Studio",
-        es: "Poise Digital Studio"
-      },
-      description: {
-        en: "Corporate website maintenance and full-stack infrastructure management. Next.js with Strapi headless CMS, multilingual support (EN/ES), VPS hosting with Nginx reverse proxy, and continuous monitoring for optimal performance.",
-        es: "Mantenimiento de sitio web corporativo y gestión de infraestructura full-stack. Next.js con Strapi headless CMS, soporte multilenguaje (EN/ES), hosting VPS con Nginx reverse proxy y monitoreo continuo para rendimiento óptimo."
-      },
-      date: {
-        en: "2025",
-        es: "2025"
-      },
-      repoLink: {
-        en: "",
-        es: ""
-      },
-      deployLink: {
-        en: "https://poisedigitalstudio.com",
-        es: "https://poisedigitalstudio.com"
-      },
-      tools: ["Next.js", "Strapi", "VPS", "Nginx", "PM2"]
     }
   ],
 

@@ -185,7 +185,7 @@ export const translations = {
     webDesignDevManager: {
       position: {
         en: "Web Design & Development Manager",
-        es: "Gerente de Diseño y Desarrollo Web"
+        es: "Manager de Diseño y Desarrollo Web"
       },
       company: {
         en: "Resto Experience",
@@ -316,11 +316,11 @@ export const translations = {
         es: "Diseño orientado a conversión con CTAs claros y páginas de servicios optimizadas (Travel Nursing, Staffing Solutions, Job Placement). Formularios de contacto y postulación integrados, y configuración inicial de SEO con Yoast."
       }
     },
-    // MedRoster - Tech Lead / Full Stack (product app)
+    // MedRoster - Full Stack (Freelance)
     medRosterTechLead: {
       position: {
-        en: "Tech Lead / Full Stack Developer",
-        es: "Tech Lead / Desarrollador Full Stack"
+        en: "Full Stack Developer (Freelance)",
+        es: "Desarrollador Full Stack (Freelance)"
       },
       company: {
         en: "Magnus HRS",
@@ -335,8 +335,8 @@ export const translations = {
         es: "Toronto, Canadá"
       },
       description1: {
-        en: "Tech lead and full-stack developer on MedRoster, the staffing operations platform for a Canadian healthcare agency. End-to-end ownership from architecture to delivery: candidate journey from application to placement — pipeline management, open needs, applicant records, and client management in one system.",
-        es: "Tech lead y desarrollador full-stack en MedRoster, la plataforma de operaciones de staffing para una agencia canadiense de salud. Responsable de punta a punta, desde la arquitectura hasta la entrega: recorrido del candidato desde la postulación hasta el placement — gestión de pipeline, necesidades abiertas, postulantes y clientes en un solo sistema."
+        en: "Freelance full-stack development on MedRoster, the staffing operations platform for a Canadian healthcare agency — candidate journey from application to placement, pipeline management, open needs, applicant records, and client management in one system. Working with Paula General.",
+        es: "Desarrollo full stack freelance en MedRoster, la plataforma de operaciones de staffing para una agencia canadiense de salud — recorrido del candidato desde la postulación hasta el placement, gestión de pipeline, necesidades abiertas, postulantes y clientes en un solo sistema. Junto a Paula General."
       },
       description2: {
         en: "Built with Next.js, TypeScript, and PostgreSQL. Product application distinct from the company's WordPress institutional website.",
@@ -365,8 +365,8 @@ export const translations = {
         es: "Magnus HRS · Canadá"
       },
       description: {
-        en: "Staffing operations platform for a Canadian healthcare agency. Tech lead from architecture to delivery: candidate path from application to placement — pipeline, unfilled needs, applicant records and customer management in one system.",
-        es: "Plataforma de operaciones de staffing para una agencia canadiense de salud. Tech lead de punta a punta: el recorrido del candidato desde la postulación hasta el placement — pipeline, necesidades sin cubrir, postulantes y clientes en un solo sistema."
+        en: "Staffing operations platform for a Canadian healthcare agency. Candidate path from application to placement — pipeline, unfilled needs, applicant records and customer management in one system.",
+        es: "Plataforma de operaciones de staffing para una agencia canadiense de salud. El recorrido del candidato desde la postulación hasta el placement — pipeline, necesidades sin cubrir, postulantes y clientes en un solo sistema."
       },
       credit: {
         en: "With",

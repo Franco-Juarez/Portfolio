@@ -9,6 +9,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
+import { CV_DRIVE_URL } from "../data/cv";
 
 const navVariants = {
   hidden: {
@@ -148,7 +149,7 @@ export default function Navbar() {
           >
             <Button
               btnText={navbar.resume[language]}
-              link={"https://drive.google.com/file/d/1tb6itQpSogQWaJ8Su6QGjyL6xoGmGkYZ/view?usp=sharing"}
+              link={CV_DRIVE_URL}
               isExternal={true}
             />
           </motion.li>
@@ -219,7 +220,7 @@ export default function Navbar() {
           <li onClick={handleMobileNav}>
             <Button
               btnText={navbar.resume[language]}
-              link={"https://drive.google.com/file/d/1tb6itQpSogQWaJ8Su6QGjyL6xoGmGkYZ/view?usp=sharing"}
+              link={CV_DRIVE_URL}
               isExternal={true}
             />
           </li>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Franco Juárez — CV</title>
+<style>
+  @page { size: A4; margin: 13mm 15mm; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1c1917;
+    font-size: 10pt;
+    line-height: 1.36;
+    background: #fff;
+  }
+  h1 { font-size: 21pt; font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; }
+  .role { margin-top: 3px; font-size: 10.5pt; color: #44403c; font-weight: 500; }
+  .contact { margin-top: 6px; font-size: 8.4pt; color: #57534e; }
+  .contact a { color: #57534e; text-decoration: none; }
+  h2 {
+    font-size: 7.8pt; letter-spacing: 0.06em; text-transform: uppercase;
+    color: #78716c; border-bottom: 1px solid #e7e5e4; padding-bottom: 3px;
+    margin: 11px 0 7px; font-weight: 700;
+  }
+  .job { margin-bottom: 9px; }
+  .job-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-title { font-weight: 700; }
+  .job-org { font-weight: 600; }
+  .job-meta { font-size: 8.3pt; color: #57534e; white-space: nowrap; }
+  .sub { font-size: 8.5pt; color: #44403c; margin: 1px 0 4px; }
+  ul { padding-left: 13px; }
+  li { margin-bottom: 2.2px; }
+  .edu { margin-bottom: 3px; display: flex; justify-content: space-between; gap: 12px; }
+  .skills { color: #292524; }
+  .skills strong { font-weight: 600; }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Franco Juárez</h1>
+    <div class="role">Desarrollador Full Stack · React, Next.js, TypeScript, PostgreSQL</div>
+    <div class="contact">
+      Bahía Blanca, Argentina · Remoto o híbrido local
+      · <a href="mailto:franjuaache@gmail.com">franjuaache@gmail.com</a>
+      · +54 291 5116477
+      · <a href="https://francojuarez.dev">francojuarez.dev</a>
+      · <a href="https://www.linkedin.com/in/francojuarez">linkedin.com/in/francojuarez</a>
+    </div>
+  </header>
+
+  <h2>Perfil</h2>
+  <p>Full stack con React y 3+ años armando producto de punta a punta (Next.js, TypeScript, Node, PostgreSQL). Hoy: tech lead de MedRoster, plataforma de staffing en uso diario; full stack e infra en Poise; y productos para cosmética, arquitectura y ops. Remoto desde Bahía Blanca; clientes en Argentina, USA y Canadá.</p>
+
+  <h2>Experiencia</h2>
+
+  <div class="job">
+    <div class="job-top">
+      <div><span class="job-title">Desarrollador Full Stack Independiente</span> · <span class="job-org">Homework</span></div>
+      <div class="job-meta">Nov 2023 – Actualidad</div>
+    </div>
+    <div class="sub">Marca propia. Productos y plataformas (no agencia de landings).</div>
+    <ul>
+      <li><strong>MedRoster</strong> (Magnus HRS, Canadá) — 2025–2026. Tech lead de punta a punta, con Paula General. Plataforma de operaciones de staffing en uso diario (~40 personas): postulantes, clientes, órdenes, arquitectura multi-tenant. Next.js, TypeScript, PostgreSQL (Supabase), Vitest, Playwright.</li>
+      <li><strong>Magnus HRS</strong> (sitio institucional) — 2025–2026. Web corporativa WordPress para la misma agencia de staffing en Canadá (aparte de MedRoster): componentes a medida, orientación a conversión y SEO básico.</li>
+      <li><strong>Poise Digital Studio</strong> — ene 2024 – hoy. Desarrollo full stack e infraestructura: Next.js + Strapi, proyectos headless (WordPress + Next.js), VPS, Nginx, PM2, monitoreo.</li>
+      <li><strong>Valuge</strong> — Plataforma para un laboratorio de cosmética dermatológica: catálogo, localizador de farmacias (Google Maps), cupones PDF, admin, JWT y Zod. Next.js, PostgreSQL, Prisma, VPS, Nginx, GitHub Actions, Cloudflare.</li>
+      <li><strong>Kerf Collective</strong> — Sitio Next.js para un estudio de ebanistería a medida en Florida.</li>
+      <li><strong>GTImports</strong> — App de inventario interno (React + Node/Express, webhooks de MercadoLibre). En curso.</li>
+      <li>Mantenimiento y features continuas en productos y sitios de clientes (deploys, incidencias, mejoras).</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-top">
+      <div><span class="job-title">Gerente de Diseño y Desarrollo Web</span> · <span class="job-org">Resto Experience</span></div>
+      <div class="job-meta">Mar 2024 – Nov 2024</div>
+    </div>
+    <div class="sub">Atlanta, USA · Remoto · Agencia de marketing para restaurantes. Antes, desarrollador WordPress (jun 2023 – mar 2024).</div>
+    <ul>
+      <li>Lideré un equipo de 5 developers y diseñadores para clientes de gastronomía.</li>
+      <li>Entregué +15 sitios en tiempo y presupuesto, coordinando con otras áreas.</li>
+      <li>Armé mantenimiento que bajó incidencias en producción.</li>
+    </ul>
+  </div>
+
+  <h2>Educación</h2>
+  <div class="edu"><div><strong>Técnico Universitario en Programación</strong> — UTN</div><div class="job-meta">2023 – 2025</div></div>
+  <div class="edu"><div><strong>Desarrollo Web, JavaScript y React.js</strong> — Coderhouse</div><div class="job-meta">2022</div></div>
+  <div class="edu"><div><strong>Profesor en Letras (Lingüística)</strong> — Universidad Nacional del Sur</div><div class="job-meta">2018</div></div>
+
+  <h2>Habilidades técnicas</h2>
+  <p class="skills"><strong>Frontend:</strong> TypeScript, JavaScript, React.js, Next.js, HTML, CSS, Tailwind, Shadcn/ui</p>
+  <p class="skills"><strong>Backend:</strong> Node.js, PostgreSQL, Supabase, Prisma, REST API, Vitest, Playwright, Zod</p>
+  <p class="skills"><strong>Infra:</strong> VPS, Nginx, PM2, CI/CD, GitHub Actions, Cloudflare, Vercel, Docker</p>
+  <p class="skills"><strong>También:</strong> WordPress (incl. headless), Strapi, Git. Español nativo · Inglés profesional (clientes USA/Canadá)</p>
+</body>
+</html>

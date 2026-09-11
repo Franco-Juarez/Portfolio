@@ -10,7 +10,7 @@ import PostgresIcon from "../icons/postgresIcon";
 import GitIcon from "../icons/gitIcon";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
-import { CV_DRIVE_URL } from "../data/cv";
+import { getCvPath } from "../data/cv";
 
 export default function About() {
   const { language } = useLanguage();
@@ -48,7 +48,7 @@ export default function About() {
           <a href="mailto:franjuaache@gmail.com" className="pb-4 hover:text-orange-light-theme dark:hover:text-orange-theme">franjuaache@gmail.com</a>
           <Button
             btnText={about.resume[language]}
-            link={CV_DRIVE_URL}
+            link={getCvPath(language)}
             isExternal={true}
           />
         </article>

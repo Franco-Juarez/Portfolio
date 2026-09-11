@@ -9,7 +9,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 import { translations } from "../data/translations";
-import { CV_DRIVE_URL } from "../data/cv";
+import { getCvPath } from "../data/cv";
 
 const navVariants = {
   hidden: {
@@ -149,7 +149,7 @@ export default function Navbar() {
           >
             <Button
               btnText={navbar.resume[language]}
-              link={CV_DRIVE_URL}
+              link={getCvPath(language)}
               isExternal={true}
             />
           </motion.li>
@@ -220,7 +220,7 @@ export default function Navbar() {
           <li onClick={handleMobileNav}>
             <Button
               btnText={navbar.resume[language]}
-              link={CV_DRIVE_URL}
+              link={getCvPath(language)}
               isExternal={true}
             />
           </li>
